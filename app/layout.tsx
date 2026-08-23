@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/ThemeProvider";
+// import { ThemeProvider } from "@/components/ThemeProvider";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -57,9 +57,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

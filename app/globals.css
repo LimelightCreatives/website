@@ -3,37 +3,82 @@
 @theme {
   --font-display: var(--font-display);
   --font-body: var(--font-regular);
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
+
+/* --------------------------------
+   Light theme
+-------------------------------- */
 
 :root {
   --background: #fffdf5;
-  --foreground: #111111;
+  --foreground: #202c44;
 
-  --surface: #f6efe5;
-  --surface-hover: #eeeeee;
+  --surface: #f5f7ed;
+  --surface-hover: #e8eee0;
 
-  --accent: #8cff5b;
-  --accent-foreground: #111111;
+  --accent: #9fc031;
+  --accent-foreground: #202c44;
 
-  --border: rgba(17, 17, 17, 0.12);
+  --cyan: #81d7d4;
+  --cyan-bright: #58c8d4;
+  --blue: #202c44;
+  --lime: #9fc031;
+
+  --border: rgba(32, 44, 68, 0.18);
 }
+
+/* --------------------------------
+   Dark theme
+-------------------------------- */
 
 .dark {
-  --background: #111111;
-  --foreground: #f5f2e9;
+  --background: #202c44;
+  --foreground: #fffdf5;
 
-  --surface: #1c1c1c;
-  --surface-hover: #292929;
+  --surface: #26334d;
+  --surface-hover: #30405e;
 
-  --accent: #8cff5b;
-  --accent-foreground: #111111;
+  --accent: #9fc031;
+  --accent-foreground: #202c44;
 
-  --border: rgba(245, 242, 233, 0.15);
+  --cyan: #81d7d4;
+  --cyan-bright: #58c8d4;
+  --blue: #202c44;
+  --lime: #9fc031;
+
+  --border: rgba(255, 253, 245, 0.2);
 }
+
+/* --------------------------------
+   Base
+-------------------------------- */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
   letter-spacing: 0.04em;
+
+  /* Dotted background */
+  --d: 1px;
+
+  background-image: radial-gradient(
+    circle at var(--d) var(--d),
+    var(--foreground) calc(var(--d) - 1px),
+    transparent var(--d)
+  );
+
+  background-size: 25px 25px;
 }
