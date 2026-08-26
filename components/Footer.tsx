@@ -3,9 +3,9 @@
 import Link from "next/link";
 
 const footerLinks = [
-  { label: "Code of Conduct", href: "/code-of-conduct" },
-  { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "/terms" },
+  // { label: "Code of Conduct", href: "/code-of-conduct" },
+  // { label: "Privacy", href: "/privacy" },
+  // { label: "Terms", href: "/terms" },
 ];
 
 export function Footer() {
@@ -15,11 +15,11 @@ export function Footer() {
       <div className="relative mb-2 overflow-hidden">
         <div className="flex w-max animate-marquee whitespace-nowrap">
           <span className="px-4 text-[clamp(5rem,15vw,14rem)] font-display font-bold leading-none tracking-[-0.04em]">
-            LIMELIGHT CREATIVE
+            LIMELIGHT CREATIVES
           </span>
 
           <span className="px-4 text-[clamp(5rem,15vw,14rem)] font-display font-bold leading-none tracking-[-0.04em] ">
-            LIMELIGHT CREATIVE
+            LIMELIGHT CREATIVES
           </span>
         </div>
       </div>
@@ -43,8 +43,8 @@ export function Footer() {
         </nav>
 
         {/* Credit */}
-        <p className="text-sm font-body">
-          made with <span aria-label="love">♥️</span> by the LIMELIGHT CREATIVE team
+        <p className="text-sm font-di">
+          made with <span aria-label="love">♥️</span> by LIMELIGHT CREATIVES
         </p>
       </div>
     </footer>

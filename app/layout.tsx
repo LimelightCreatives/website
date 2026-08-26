@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FilloutProvider } from "@/components/FilloutProvider";
 // import { ThemeProvider } from "@/components/ThemeProvider";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -6,11 +7,11 @@ import "./globals.css";
 const display = localFont({
   src: [
     {
-      path: "../fonts/Classica-Book.ttf",
+      path: "../fonts/display/Classica-Book.ttf",
       weight: "400",
     },
     {
-      path: "../fonts/Classica-Bold.ttf",
+      path: "../fonts/display/Classica-Bold.ttf",
       weight: "700",
     },
   ],
@@ -20,15 +21,15 @@ const display = localFont({
 const body = localFont({
   src: [
     {
-      path: "../fonts/satoshi/Satoshi-Regular.otf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Medium.otf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-SemiBold.ttf",
       weight: "700",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Bold.otf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Bold.ttf",
       weight: "900",
     },
   ],
@@ -47,17 +48,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <FilloutProvider>
+          {children}
+        </FilloutProvider>
       </body>
     </html>
   );

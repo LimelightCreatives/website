@@ -1,11 +1,13 @@
+"use client";
+
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { useFillout } from "@/components/FilloutProvider";
 
 type ButtonProps = {
   href?: string;
-  children: ReactNode;
-  className?: string;
+  children: React.ReactNode;
   variant?: "primary" | "secondary";
+  className?: string;
 };
 
 export function Button({
@@ -14,6 +16,8 @@ export function Button({
   className = "",
   variant = "primary",
 }: ButtonProps) {
+  const { openFillout } = useFillout();
+
   const baseStyles =
     "border-[2px] px-4 py-2 font-display font-bold transition-colors";
 
@@ -27,7 +31,17 @@ export function Button({
 
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 
-  if (href) {
+  if (href === "#apply") {
+    return (
+      <button
+        type="button"
+        onClick={openFillout}
+        className={`${styles} ${className ?? ""}`}
+      >
+        {children}
+      </button>
+    );
+  } else if (href) {
     return (
       <Link href={href} className={styles}>
         {children}

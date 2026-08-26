@@ -17,11 +17,11 @@ export function Hero() {
         </p>
 
         <div className="mt-8 text-lg flex gap-4">
-          <Button href="/">
-            Register Interest {'>'}
+          <Button href="#apply">
+            REGISTER INTEREST {'>'}
           </Button>
-          <Button href="/" variant="secondary">
-            View Timeline
+          <Button href="#timeline" variant="secondary">
+            WHAT&apos;S NEXT
           </Button>
         </div>
 
