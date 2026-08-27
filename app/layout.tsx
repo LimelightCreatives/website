@@ -7,11 +7,11 @@ import "./globals.css";
 const display = localFont({
   src: [
     {
-      path: "../fonts/display/Classica-Book.ttf",
+      path: "../fonts/display/Classica-Book.woff2",
       weight: "400",
     },
     {
-      path: "../fonts/display/Classica-Bold.ttf",
+      path: "../fonts/display/Classica-Bold.woff2",
       weight: "700",
     },
   ],
@@ -21,15 +21,15 @@ const display = localFont({
 const body = localFont({
   src: [
     {
-      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Regular.ttf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Regular.woff2",
       weight: "400",
     },
     {
-      path: "../fonts/body/hanken_grotesk/HankenGrotesk-SemiBold.ttf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-SemiBold.woff2",
       weight: "700",
     },
     {
-      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Bold.ttf",
+      path: "../fonts/body/hanken_grotesk/HankenGrotesk-Bold.woff2",
       weight: "900",
     },
   ],

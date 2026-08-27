@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 
-const footerLinks = [
-  // { label: "Code of Conduct", href: "/code-of-conduct" },
-  // { label: "Privacy", href: "/privacy" },
-  // { label: "Terms", href: "/terms" },
-];
+// const footerLinks = [
+//   { label: "Code of Conduct", href: "/code-of-conduct" },
+//   { label: "Privacy", href: "/privacy" },
+//   { label: "Terms", href: "/terms" },
+// ];
 
 export function Footer() {
   return (
@@ -31,7 +31,7 @@ export function Footer() {
       <div className="flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
         {/* Links */}
         <nav className="flex flex-wrap gap-x-6 gap-y-2">
-          {footerLinks.map((link) => (
+          {/* {footerLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -39,7 +39,7 @@ export function Footer() {
             >
               {link.label}
             </Link>
-          ))}
+          ))} */}
         </nav>
 
         {/* Credit */}

@@ -21,7 +21,7 @@ export function TimelineCard() {
 
           <div className="mt-12 max-w-3xl space-y-4">
             <div className="flex items-center justify-between border-t border-current/20 pt-4">
-              <span className="font-display text-2xl">August 26</span>
+              <span className="font-display text-2xl">August 30</span>
               <span className="font-body text-md">RSVPs OPEN</span>
             </div>
 
