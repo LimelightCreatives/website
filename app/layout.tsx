@@ -4,6 +4,11 @@ import { FilloutProvider } from "@/components/FilloutProvider";
 import localFont from "next/font/local";
 import "./globals.css";
 
+const wordmark = localFont({
+  src: "../fonts/display/Autolova.woff2",
+  variable: "--font-wordmark",
+});
+
 const display = localFont({
   src: [
     {
