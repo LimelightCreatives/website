@@ -2,50 +2,51 @@
 
 import Link from "next/link";
 
-// const footerLinks = [
-//   { label: "Code of Conduct", href: "/code-of-conduct" },
-//   { label: "Privacy", href: "/privacy" },
-//   { label: "Terms", href: "/terms" },
-// ];
-
 export function Footer() {
   return (
-    <footer className="overflow-hidden px-6 pb-6 pt-32">
-      {/* Marquee */}
-      <div className="relative mb-2 overflow-hidden">
-        <div className="flex w-max animate-marquee whitespace-nowrap">
-          <span className="px-4 text-[clamp(5rem,15vw,14rem)] font-display font-bold leading-none tracking-[-0.04em]">
-            LIMELIGHT CREATIVES
-          </span>
+    <footer className="relative overflow-hidden px-6 pb-6 pt-24 md:pt-32">
 
-          <span className="px-4 text-[clamp(5rem,15vw,14rem)] font-display font-bold leading-none tracking-[-0.04em] ">
-            LIMELIGHT CREATIVES
-          </span>
-        </div>
-      </div>
+      {/* Footer details */}
+      <div className="mx-auto mt-16 max-w-7xl">
+        <div className="border-t-2 border-[var(--border)]" />
 
-      {/* Divider */}
-      <div className="border-t border-[var(--border)]" />
+        <div className="flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-1">
+            <span className="font-display text-2xl font-bold tracking-[-0.05em]">
+              LIMELIGHT CREATIVES
+            </span>
+            <span className="text-sm font-body font-bold opacity-70">
+              Free film-a-thons for high schoolers.
+            </span>
+          </div>
 
-      {/* Bottom row */}
-      <div className="flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
-        {/* Links */}
-        <nav className="flex flex-wrap gap-x-6 gap-y-2">
-          {/* {footerLinks.map((link) => (
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-body font-bold">
             <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-body transition-opacity hover:opacity-50"
+              href="/code-of-conduct"
+              className="transition-opacity hover:opacity-50"
             >
-              {link.label}
+              CODE OF CONDUCT
             </Link>
-          ))} */}
-        </nav>
 
-        {/* Credit */}
-        <p className="text-sm font-di">
-          made with <span aria-label="love">♥️</span> by LIMELIGHT CREATIVES
-        </p>
+            <Link
+              href="/privacy"
+              className="transition-opacity hover:opacity-50"
+            >
+              PRIVACY
+            </Link>
+
+            <Link
+              href="/terms"
+              className="transition-opacity hover:opacity-50"
+            >
+              TERMS
+            </Link>
+          </div>
+
+          <p className="text-sm font-body font-bold">
+            made with <span aria-label="love">♥</span> by LIMELIGHT CREATIVES
+          </p>
+        </div>
       </div>
     </footer>
   );
