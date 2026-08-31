@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="mt-0 relative min-h-screen overflow-hidden">
       {/* Decorative side images */}
-      <div className="pointer-events-none absolute -left-100 top-[-130px] h-[1500] w-[1481px] z-0 [@media_(max-aspect-ratio:4/3)]:hidden">
+      {/* <div className="pointer-events-none absolute -left-100 top-[-130px] h-[1500] w-[1481px] z-0 [@media_(max-aspect-ratio:4/3)]:hidden">
         <Image
           src="/assets/hero/left.png"
           alt=""
@@ -13,7 +13,7 @@ export function Hero() {
           className="object-contain object-left-top"
           priority
         />
-      </div>
+      </div> */}
 
       <div className="pointer-events-none absolute -right-60 top-[-125px] h-[1100] w-[1261px] z-0 [@media_(max-aspect-ratio:4/3)]:hidden">
         <Image
@@ -31,7 +31,7 @@ export function Hero() {
         </h1>
 
         <h1 className="max-w-5xl text-[clamp(4rem,6rem,11rem)] font-display font-bold leading-[0.8] tracking-[-0.08em]">
-          into the limelight.
+          into the <span className="text-[var(--ontik-accent)]">limelight.</span>
         </h1>
 
         <p className="mt-10 max-w-xl text-xl font-body font-bold">

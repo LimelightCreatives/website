@@ -90,7 +90,7 @@ export function TeamCard() {
           <h2 className="font-display text-[clamp(4rem,9vw,9rem)] leading-[0.82] tracking-[-0.07em]">
             The
             <br />
-            <span className="font-bold">team.</span>
+            <span className="font-bold text-[var(--ontik-accent)]">team.</span>
           </h2>
 
           <div className="mt-15">

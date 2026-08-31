@@ -23,7 +23,7 @@ export function Button({
 
   const variants = {
     primary:
-      "border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)] hover:bg-[var(--accent)] hover:text-[var(--foreground)]",
+      "border-[var(--foreground)] bg-[var(--ontik-accent)] text-[var(--background)] hover:bg-[var(--accent)] hover:text-[var(--foreground)]",
 
     secondary:
       "border-[var(--foreground)] bg-transparent text-[var(--foreground)] hover:bg-[var(--accent)] hover:text-[var(--foreground)]",

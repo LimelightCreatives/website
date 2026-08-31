@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -91,7 +92,16 @@ export function FAQCard() {
             })}
           </div>
         </div>
+        
       </div>
+      <div className="absolute right-[5vw] top-2/3 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] overflow-hidden border-2 border-black">
+              <Image
+                src="/assets/cards/event.png"
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
     </article>
   );
 }

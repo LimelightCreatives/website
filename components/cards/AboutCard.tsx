@@ -8,28 +8,36 @@ export function AboutCard() {
           <h2 className="font-display text-[clamp(4rem,9vw,9rem)] leading-[0.82] tracking-[-0.07em]">
             Direct your
             <br />
-            <span className="font-bold">own story.</span>
+            <span className="font-bold text-[var(--ontik-accent)]">
+              own story.
+            </span>
           </h2>
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
-            We&apos;re giving the next generation of screenwriters, cinematographers, 
-            and <i>auteurs</i> a stage to show their skills to the world. 
-            <br/><br/> 
-            Our name pays homage to one of the first cinema studios in the world, following 
-            a long line of filmmaking heritage. 
-            <br/><br/>
-            We're here to push forward the dreams of filmmakers everywhere, by giving teenagers 
-            the resources to kickstart their journey into visual storytelling.
+            We&apos;re giving the next generation of screenwriters,
+            cinematographers, and <i>auteurs</i> a stage to show their skills
+            to the world.
+            <br />
+            <br />
+            Our name pays homage to one of the first cinema studios in the
+            world, following a long line of filmmaking heritage.
+            <br />
+            <br />
+            We&apos;re here to push forward the dreams of filmmakers
+            everywhere, by giving teenagers the resources to kickstart their
+            journey into visual storytelling.
           </p>
         </div>
       </div>
 
-      <div className="pointer-events-none absolute right-[-200px] top-0 bottom-0 w-[40%] min-w-[320px] z-0">
+      <div className="pointer-events-none absolute right-[-200px] top-0 bottom-0 w-[40%] min-w-[320px] z-0"> <Image src="/assets/cards/bg1.png" alt="" fill className="object-cover object-center" /> </div>
+
+      <div className="absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] overflow-hidden border-2 border-black">
         <Image
-          src="/assets/cards/bg1.png"
+          src="/assets/cards/camera_guy.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover"
         />
       </div>
     </article>
