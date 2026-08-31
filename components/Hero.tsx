@@ -59,20 +59,19 @@ function LimelightSquiggle(props: React.SVGProps<SVGSVGElement>) {
 export function Hero() {
   return (
     <section className="mt-0 relative min-h-screen overflow-hidden">
-
       <div className="mx-auto mt-8 relative z-10 flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 text-center">
         <div className="relative">
-          <h1 className="max-w-5xl text-[clamp(3.75rem,6rem,10rem)] font-display leading-[0.8] tracking-[-0.08em]">
+          <h1 className="max-w-5xl text-[3.5rem] md:text-[clamp(3.75rem,6rem,10rem)] font-display leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
             Your chance to step
           </h1>
 
-          {/* sparkles anchored to the top-right corner of "...step" */}
-          <SparkleBig className="pointer-events-none absolute -top-6 -right-10 h-20 w-14 md:-top-7 md:-right-28 md:h-28 md:w-[4.5rem]" />
-          <SparkleSmall className="pointer-events-none absolute -top-16 -right-1 h-8 w-3 md:-top-16 md:-right-16 md:h-16 md:w-16" />
+          {/* sparkles hidden on mobile */}
+          <SparkleBig className="pointer-events-none absolute hidden -top-7 -right-28 h-28 w-[4.5rem] md:block" />
+          <SparkleSmall className="pointer-events-none absolute hidden -top-16 -right-16 h-16 w-16 md:block" />
         </div>
 
         <div className="relative">
-          <h1 className="max-w-5xl text-[clamp(4rem,6rem,11rem)] font-display font-bold leading-[0.8] tracking-[-0.08em]">
+          <h1 className="max-w-5xl text-[3.75rem] md:text-[clamp(4rem,6rem,11rem)] font-display font-bold leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
             into the{" "}
             <span className="relative inline-block text-[var(--ontik-accent)]">
               limelight.
@@ -80,23 +79,26 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* sparkles anchored to the bottom-left corner of "into..." */}
-          <SparkleBig className="pointer-events-none absolute -bottom-4 -left-12 h-20 w-14 md:-bottom-12 md:-left-28 md:h-28 md:w-[4.5rem]" />
-          <SparkleSmall className="pointer-events-none absolute -bottom-16 -left-2 h-6 w-3 md:-bottom-20 md:-left-16 md:h-16 md:w-16" />
+          {/* sparkles hidden on mobile */}
+          <SparkleBig className="pointer-events-none absolute hidden -bottom-12 -left-28 h-28 w-[4.5rem] md:block" />
+          <SparkleSmall className="pointer-events-none absolute hidden -bottom-20 -left-16 h-16 w-16 md:block" />
         </div>
 
         <p className="mt-10 max-w-xl text-xl font-body font-bold">
           Limelight Creatives run free film-a-thons for high schoolers.
         </p>
 
-        <div className="mt-8 text-lg flex gap-4">
+        <div className="mt-8 flex gap-4 text-lg">
           <Button href="#apply">REGISTER INTEREST {">"}</Button>
           <Button href="#timeline" variant="secondary">
             WHAT&apos;S NEXT
           </Button>
         </div>
 
-        <a className="mt-8" href="mailto:inquiries@limelightcreatives.org">
+        <a
+          className="mt-8"
+          href="mailto:inquiries@limelightcreatives.org"
+        >
           <u>Interested in sponsoring?</u>
         </a>
       </div>
