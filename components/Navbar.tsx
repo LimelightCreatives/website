@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/Button";
@@ -45,6 +44,31 @@ export default function Navbar() {
     };
   }, []);
 
+  const scrollToCard = (id: string) => {
+    const card = document.getElementById(id);
+
+    if (!card) return;
+
+    /*
+     * Temporarily remove sticky positioning so we can measure
+     * where the card naturally exists in the document.
+     */
+    const previousPosition = card.style.position;
+
+    card.style.position = "static";
+
+    const targetTop =
+      card.getBoundingClientRect().top + window.scrollY - 24;
+
+    // Restore the sticky positioning.
+    card.style.position = previousPosition;
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`fixed left-0 top-4 z-50 w-full px-4 transition-transform duration-300 ease-out ${
@@ -63,31 +87,42 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Navigation — only shown on the home page */}
+        {/* Navigation */}
         {isHome && (
           <div className="absolute left-1/2 hidden -translate-x-1/2 items-center md:flex">
-            {links.map((link, index) => (
-              <div key={link.href} className="flex items-center">
-                <Link
-                  href={link.href}
-                  className="px-3 py-2 font-display text-sm font-bold tracking-[0.12em] transition-opacity hover:opacity-50"
-                >
-                  {link.label}
-                </Link>
+            {links.map((link, index) => {
+              const id = link.href.slice(1);
 
-                {index < links.length - 1 && (
-                  <span aria-hidden="true" className="font-display text-sm">
-                    /
-                  </span>
-                )}
-              </div>
-            ))}
+              return (
+                <div key={link.href} className="flex items-center">
+                  <button
+                    type="button"
+                    onClick={() => scrollToCard(id)}
+                    className="px-3 py-2 font-display text-sm font-bold tracking-[0.12em] transition-opacity hover:opacity-50"
+                  >
+                    {link.label}
+                  </button>
+
+                  {index < links.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="font-display text-sm"
+                    >
+                      /
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
 
-        <Button href="#apply" variant="secondary">
-          REGISTER {">"}
-        </Button>
+        {/* Register */}
+        {isHome && (
+          <Button href="#apply" variant="secondary">
+            REGISTER {">"}
+          </Button>
+        )}
       </nav>
     </header>
   );
