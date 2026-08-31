@@ -34,13 +34,6 @@ export function Footer() {
             >
               PRIVACY
             </Link>
-
-            <Link
-              href="/terms"
-              className="transition-opacity hover:opacity-50"
-            >
-              TERMS
-            </Link>
           </div>
 
           <p className="text-sm font-body font-bold">
