@@ -68,13 +68,9 @@ export function AboutCard() {
         </div>
       </div>
 
-      {/* photo, its flat offset "sticker" shadow, and scattered sparkles all live in one
-         positioned box so they move and scale together */}
-      <div className="absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[-1.5deg]">
-        {/* offset flat shadow block, standing in for the old grunge texture */}
+      <div className="hidden lg:block absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[-1.5deg]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
-        {/* photo frame */}
         <div className="absolute inset-0 overflow-hidden border-2 border-black bg-[var(--background)]">
           <Image
             src="/assets/cards/camera_guy.png"
@@ -84,7 +80,6 @@ export function AboutCard() {
           />
         </div>
 
-        {/* sparkles scattered around the frame, replacing the ink scribble */}
         <Sparkle className="pointer-events-none absolute -top-10 -right-5 h-16 w-11 rotate-[8deg] text-[var(--ontik-accent)] md:-top-14 md:-right-20 md:h-24 md:w-16" />
         <Sparkle className="pointer-events-none absolute -top-4 right-10 h-6 w-4 rotate-[-6deg] text-[#1B2340] md:-top-12 md:right-16 md:h-9 md:w-6" />
         <Sparkle className="pointer-events-none absolute -bottom-8 -left-6 h-10 w-7 rotate-[-15deg] text-[#1B2340] md:-bottom-10 md:-left-9 md:h-14 md:w-10" />

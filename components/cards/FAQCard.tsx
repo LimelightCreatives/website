@@ -146,7 +146,7 @@ export function FAQCard() {
       </div>
 
       {/* photo, its flat offset "sticker" shadow, and scattered sparkles — same treatment as the About section */}
-      <div className="absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[1.5deg]">
+      <div className="hidden lg:block absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[1.5deg]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
         <div className="absolute inset-0 overflow-hidden border-2 border-black bg-[var(--background)]">

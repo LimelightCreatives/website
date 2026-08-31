@@ -19,7 +19,7 @@ export function ScrollCards() {
         <div
           key={card.id}
           id={card.id}
-          className="sticky top-6 mb-8 h-[calc(100vh-3rem)] overflow-hidden bg-[var(--background)]"
+          className="sticky top-6 mb-0 h-[calc(100vh-3rem)] overflow-hidden bg-[var(--background)]"
           style={{
             zIndex: index + 1,
           }}
