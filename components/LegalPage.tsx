@@ -8,7 +8,7 @@ export type LegalSection = {
 type LegalPageProps = {
   eyebrow?: string;
   title: string;
-  intro?: string;
+  intro?: React.ReactNode;
   lastUpdated?: string;
   sections: LegalSection[];
 };

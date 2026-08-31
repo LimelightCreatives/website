@@ -34,6 +34,12 @@ export function Footer() {
             >
               PRIVACY
             </Link>
+            <Link
+              href="/safeguarding-policy"
+              className="transition-opacity hover:opacity-50"
+            >
+              SAFEGUARDING POLICY
+            </Link>
           </div>
 
           <p className="text-sm font-body font-bold">
