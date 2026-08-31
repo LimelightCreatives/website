@@ -94,7 +94,7 @@ export function FAQCard() {
 
         <div>
           <h2 className="relative inline-block font-display  text-[clamp(4rem,9vw,9rem)] leading-[0.82] tracking-[-0.07em]">
-            Questions<span className="text-[var(--ontik-accent)]">?</span>
+            Questions?
             <QuestionsSquiggle className="pointer-events-none absolute left-0 top-full mt-1 h-auto w-full text-[var(--ontik-accent)]" />
           </h2>
 
