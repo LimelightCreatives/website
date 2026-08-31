@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function TimelineCard() {
   return (
     <article className="relative h-full bg-[var(--foreground)] text-[var(--background)]">
@@ -15,8 +17,7 @@ export function TimelineCard() {
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
             Limelight Creatives is launching our very first film-a-thon this Spring holidays. Two 
-            days to craft your very own short film based on a theme. All you need to bring is some 
-            creativity and a vision.
+            days to craft your very own short film based on a theme!
           </p>
 
           <div className="mt-12 max-w-3xl space-y-4">
@@ -34,6 +35,14 @@ export function TimelineCard() {
               <span className="font-display text-2xl">October 24–25</span>
               <span className="font-body text-md">EVENT OPENING DAY!</span>
             </div>
+          </div>
+          <div className="pointer-events-none absolute right-[-200px] top-0 bottom-0 w-[40%] min-w-[435px] z-0">
+            <Image
+              src="/assets/cards/bg2.png"
+              alt=""
+              fill
+              className="object-cover object-center"
+            />
           </div>
         </div>
       </div>

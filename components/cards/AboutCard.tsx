@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function AboutCard() {
   return (
     <article className="relative h-full overflow-hidden bg-[var(--background)]">
@@ -11,7 +13,7 @@ export function AboutCard() {
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
             We&apos;re giving the next generation of screenwriters, cinematographers, 
-            and auteurs a stage to show their skills to the world. 
+            and <i>auteurs</i> a stage to show their skills to the world. 
             <br/><br/> 
             Our name pays homage to one of the first cinema studios in the world, following 
             a long line of filmmaking heritage. 
@@ -22,12 +24,14 @@ export function AboutCard() {
         </div>
       </div>
 
-      {/* <div className="pointer-events-none absolute right-[-5%] top-[12%] w-[35vw] max-w-[520px] rotate-[3deg]">
-        <div className="aspect-[4/3] bg-[var(--surface)] p-3 shadow-sm">
-          <div className="h-full w-full bg-[var(--cyan)]" />
-        </div>
-      </div> */}
-
+      <div className="pointer-events-none absolute right-[-200px] top-0 bottom-0 w-[40%] min-w-[320px] z-0">
+        <Image
+          src="/assets/cards/bg1.png"
+          alt=""
+          fill
+          className="object-cover object-center"
+        />
+      </div>
     </article>
   );
 }

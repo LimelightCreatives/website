@@ -1,12 +1,15 @@
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { FilloutProvider } from "@/components/FilloutProvider";
 // import { ThemeProvider } from "@/components/ThemeProvider";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 const wordmark = localFont({
   src: "../fonts/display/Autolova.woff2",
   variable: "--font-wordmark",
+  preload: false
 });
 
 const display = localFont({
@@ -21,6 +24,7 @@ const display = localFont({
     },
   ],
   variable: "--font-display",
+  preload: true
 });
 
 const body = localFont({
@@ -39,6 +43,7 @@ const body = localFont({
     },
   ],
   variable: "--font-body",
+  preload: true
 });
 
 // const body = localFont({
@@ -61,7 +66,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <FilloutProvider>
+          <Navbar />
+
           {children}
+          <Footer />
         </FilloutProvider>
       </body>
     </html>

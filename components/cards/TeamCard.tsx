@@ -65,18 +65,18 @@ function TeamMarquee({
 
 export function TeamCard() {
   const team = [
-    { name: "Ontik Reza", position: "Sponsorship Outreach", image: "/team/headshots/Ontik.jpg"},
-    { name: "Dev Damani", position: "Sponsorship Outreach", image: "/team/headshots/Dev.jpg"},
-    { name: "Arda Redjeb", position: "Logistics", image: "/team/headshots/Arda.jpg" },
-    { name: "Hayley Moon", position: "Sponsorship Outreach", image: "/team/headshots/Hayley.jpg" },
-    { name: "Joshua Yu", position: "Sponsorship Outreach", image: "/team/headshots/Joshua.jpg" },
-    { name: "Theo Lagman", position: "Marketing", image: "/team/headshots/Theo.jpg" },
-    { name: "Riham Ahmad", position: "Event Management", image: "/team/headshots/Riham.jpg" },
-    { name: "Meher Talwar", position: "Logistics", image: "/team/headshots/Meher.jpg" },
-    { name: "Justin Kresnadi", position: "Logistics", image: "/team/headshots/Justin.jpg" },
-    { name: "Amisha Joshi", position: "Marketing", image: "/team/headshots/Amisha.jpg" },
-    { name: "Anya Shukla", position: "Event Management", image: "/team/headshots/Anya.jpg" },
-    { name: "Olivia Li", position: "Event Management", image: "/team/headshots/Olivia Li.jpg" },
+    { name: "Amisha Joshi", position: "Marketing", image: "/team/headshots/Amisha.webp" },
+    { name: "Anya Shukla", position: "Event Management", image: "/team/headshots/Anya.webp" },
+    { name: "Arda Redjeb", position: "Logistics", image: "/team/headshots/Arda.webp" },
+    { name: "Dev Damani", position: "Sponsorship Outreach", image: "/team/headshots/Dev.webp"},
+    { name: "Hayley Moon", position: "Sponsorship Outreach", image: "/team/headshots/Hayley.webp" },
+    { name: "Joshua Yu", position: "Sponsorship Outreach", image: "/team/headshots/Joshua.webp" },
+    { name: "Justin Kresnadi", position: "Logistics", image: "/team/headshots/Justin.webp" },
+    { name: "Meher Talwar", position: "Logistics", image: "/team/headshots/Meher.webp" },
+    { name: "Olivia Li", position: "Event Management", image: "/team/headshots/Olivia Li.webp" },
+    { name: "Ontik Reza", position: "Sponsorship Outreach", image: "/team/headshots/Ontik.webp"},
+    { name: "Riham Ahmad", position: "Event Management", image: "/team/headshots/Riham.webp" },
+    { name: "Theo Lagman", position: "Marketing", image: "/team/headshots/Theo.webp" },
   ];
 
   return (
@@ -98,6 +98,14 @@ export function TeamCard() {
           </div>
         </div>
       </div>
+      <Image
+        src="/assets/cards/bg3.png"
+        alt=""
+        width={400}
+        height={400}
+        className="absolute top-[-15px] right-[-15px] h-auto"
+        priority
+      />
     </article>
   );
 }
