@@ -387,10 +387,10 @@ export default function Privacy() {
               <p className="mt-6">
                 Privacy contact form:{" "}
                 <a
-                  href="#"
+                  href="https://limelightcreatives.fillout.com/t/gaGhCkKMJous"
                   className="underline underline-offset-4 hover:opacity-50"
                 >
-                  [form link here]
+                  https://limelightcreatives.fillout.com/t/gaGhCkKMJous
                 </a>
               </p>
             </div>
