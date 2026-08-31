@@ -36,7 +36,7 @@ export function TimelineCard() {
               <span className="font-body text-md">EVENT OPENING DAY!</span>
             </div>
           </div>
-          <div className="pointer-events-none absolute right-[-250px] top-0 bottom-0 w-[40%] min-w-[435px] z-0">
+          <div className="hidden lg:block pointer-events-none absolute right-[-250px] top-0 bottom-0 w-[40%] min-w-[435px] z-0">
             <Image
               src="/assets/cards/bg2.png"
               alt=""
