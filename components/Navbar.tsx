@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { Button } from "@/components/Button";
 
 const links = [
@@ -15,6 +17,9 @@ const links = [
 
 export default function Navbar() {
   const [hidden, setHidden] = useState(false);
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -48,13 +53,7 @@ export default function Navbar() {
     >
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between rounded-sm border border-[var(--border)] bg-[var(--background)] px-2 py-2 md:px-3">
         {/* Logo */}
-        <Link
-          href="/"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
+        <a href="/" aria-label="Go to home">
           <Image
             src="/branding/logo.svg"
             alt="Story Labs"
@@ -62,29 +61,30 @@ export default function Navbar() {
             height={64}
             priority
           />
-        </Link>
+        </a>
 
-        {/* Navigation */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center md:flex">
-          {links.map((link, index) => (
-            <div key={link.href} className="flex items-center">
-              <Link
-                href={link.href}
-                className="px-3 py-2 font-display text-sm font-bold tracking-[0.12em] transition-opacity hover:opacity-50"
-              >
-                {link.label}
-              </Link>
+        {/* Navigation — only shown on the home page */}
+        {isHome && (
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center md:flex">
+            {links.map((link, index) => (
+              <div key={link.href} className="flex items-center">
+                <Link
+                  href={link.href}
+                  className="px-3 py-2 font-display text-sm font-bold tracking-[0.12em] transition-opacity hover:opacity-50"
+                >
+                  {link.label}
+                </Link>
 
-              {index < links.length - 1 && (
-                <span aria-hidden="true" className="font-display text-sm">
-                  /
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
+                {index < links.length - 1 && (
+                  <span aria-hidden="true" className="font-display text-sm">
+                    /
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
 
-        {/* Apply */}
         <Button href="#apply" variant="secondary">
           REGISTER {">"}
         </Button>
