@@ -117,12 +117,9 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* Register */}
-        {isHome && (
-          <Button href="#apply" variant="secondary">
-            REGISTER {">"}
-          </Button>
-        )}
+        <Button href="#apply" variant="secondary">
+          REGISTER {">"}
+        </Button>
       </nav>
     </header>
   );
