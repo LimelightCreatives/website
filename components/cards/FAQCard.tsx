@@ -87,7 +87,7 @@ export function FAQCard() {
 
   return (
     <article className="relative h-full overflow-hidden bg-[var(--background)]">
-      <div className="flex h-full flex-col justify-between px-6 py-12 md:px-16 md:py-16">
+      <div className="flex h-full flex-col justify-between px-6 py-12 md:px-16 md:py-16 lg:pr-[48%]">
         <span className="font-body text-sm uppercase tracking-[0.15em]">
           FAQ
         </span>
@@ -146,7 +146,7 @@ export function FAQCard() {
       </div>
 
       {/* photo, its flat offset "sticker" shadow, and scattered sparkles — same treatment as the About section */}
-      <div className="hidden lg:block absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[1.5deg]">
+      <div className="absolute right-[2vw] top-1/2 z-20 hidden aspect-[4/3] w-[38vw] max-w-6xl -translate-y-1/2 rotate-[1.5deg] lg:block xl:right-[5vw] xl:w-[40vw]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
         <div className="absolute inset-0 overflow-hidden border-2 border-black bg-[var(--background)]">

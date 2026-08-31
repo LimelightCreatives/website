@@ -40,7 +40,7 @@ function Sparkle(props: React.SVGProps<SVGSVGElement>) {
 export function AboutCard() {
   return (
     <article className="relative h-full overflow-hidden bg-[var(--background)]">
-      <div className="relative z-10 flex h-full flex-col justify-center px-6 py-12 md:px-16">
+      <div className="relative z-10 flex h-full flex-col justify-center px-6 py-12 md:px-16 lg:pr-[48%]">
         <div className="max-w-5xl">
           <h2 className="font-display text-[clamp(4rem,9vw,9rem)] leading-[0.82] tracking-[-0.07em]">
             Direct your
@@ -68,7 +68,7 @@ export function AboutCard() {
         </div>
       </div>
 
-      <div className="hidden lg:block absolute right-[5vw] top-1/2 z-20 w-[40vw] max-w-6xl -translate-y-1/2 aspect-[4/3] rotate-[-1.5deg]">
+      <div className="absolute right-[2vw] top-1/2 z-20 hidden aspect-[4/3] w-[38vw] max-w-6xl -translate-y-1/2 rotate-[-1.5deg] lg:block xl:right-[5vw] xl:w-[40vw]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
         <div className="absolute inset-0 overflow-hidden border-2 border-black bg-[var(--background)]">
