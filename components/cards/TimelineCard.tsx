@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function TimelineCard() {
   return (
-    <article className="relative h-full bg-[var(--foreground)] text-[var(--background)]">
+    <article className="relative overflow-hidden h-full bg-[var(--foreground)] text-[var(--background)]">
       <div className="flex h-full flex-col justify-between px-6 py-12 md:px-16 md:py-16">
         <div className="font-body text-sm uppercase tracking-[0.15em]">
           WHAT&apos;S NEXT
