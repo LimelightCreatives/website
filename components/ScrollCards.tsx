@@ -30,28 +30,37 @@ export function ScrollCards() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(
-    () => {
-      ScrollTrigger.config({
-        ignoreMobileResize: true,
-        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+  () => {
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
+    cardRefs.current
+      .filter((el): el is HTMLDivElement => el !== null)
+      .forEach((el) => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: "bottom bottom",
+          endTrigger: sectionRef.current,
+          end: "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+        });
       });
 
-      cardRefs.current
-        .filter((el): el is HTMLDivElement => el !== null)
-        .forEach((el) => {
-          ScrollTrigger.create({
-            trigger: el,
-            start: "bottom bottom",
-            endTrigger: sectionRef.current,
-            end: "bottom bottom",
-            pin: true,
-            pinSpacing: false,
-            invalidateOnRefresh: true,
-          });
-        });
-    },
-    { scope: sectionRef, dependencies: [] }
-  );
+    const images = Array.from(document.querySelectorAll("img"));
+    Promise.all(
+      images.map((img) =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise((res) => {
+              img.addEventListener("load", res, { once: true });
+              img.addEventListener("error", res, { once: true });
+            })
+      )
+    ).then(() => ScrollTrigger.refresh());
+  },
+  { scope: sectionRef, dependencies: [] }
+);
 
   useEffect(() => {
     const setViewportHeight = () => {
