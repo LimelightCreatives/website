@@ -31,16 +31,20 @@ export function ScrollCards() {
 
   useGSAP(
     () => {
+      ScrollTrigger.config({
+        ignoreMobileResize: true, // ignore address-bar-driven resize events on mobile
+      });
+
       cardRefs.current
         .filter((el): el is HTMLDivElement => el !== null)
         .forEach((el) => {
           ScrollTrigger.create({
             trigger: el,
-            start: "bottom bottom",      // lock in place once the card has fully scrolled into view
+            start: "bottom bottom",
             endTrigger: sectionRef.current,
-            end: "bottom bottom",        // stay pinned (now hidden behind later cards) till the section ends
+            end: "bottom bottom",
             pin: true,
-            pinSpacing: false,           // don't reserve space — later cards scroll up over it
+            pinSpacing: false,
             invalidateOnRefresh: true,
           });
         });
