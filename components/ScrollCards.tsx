@@ -32,8 +32,7 @@ export function ScrollCards() {
   useGSAP(
     () => {
       ScrollTrigger.config({
-        ignoreMobileResize: true,
-        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+        ignoreMobileResize: true, // ignore address-bar-driven resize events on mobile
       });
 
       cardRefs.current

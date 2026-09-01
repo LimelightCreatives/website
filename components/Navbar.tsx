@@ -24,6 +24,12 @@ export default function Navbar() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
+      // Skip autohide on mobile — nav stays put
+      if (window.innerWidth < 768) {
+        setHidden(false);
+        return;
+      }
+
       const currentScrollY = window.scrollY;
 
       if (currentScrollY < 50) {
@@ -58,7 +64,7 @@ export default function Navbar() {
     card.style.position = "static";
 
     const targetTop =
-      card.getBoundingClientRect().top + window.scrollY - 24;
+      card.getBoundingClientRect().top + window.scrollY;
 
     // Restore the sticky positioning.
     card.style.position = previousPosition;
