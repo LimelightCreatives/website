@@ -145,7 +145,6 @@ export function FAQCard() {
         </div>
       </div>
 
-      {/* photo, its flat offset "sticker" shadow, and scattered sparkles — same treatment as the About section */}
       <div className="absolute right-[2vw] top-1/2 z-20 hidden aspect-[4/3] w-[38vw] max-w-6xl -translate-y-1/2 rotate-[1.5deg] lg:block xl:right-[5vw] xl:w-[40vw]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
@@ -154,6 +153,7 @@ export function FAQCard() {
             src="/assets/cards/event.png"
             alt=""
             fill
+            sizes="(min-width: 1280px) 40vw, (min-width: 1024px) 38vw"
             className="object-cover"
           />
         </div>

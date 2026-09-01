@@ -76,6 +76,7 @@ export function AboutCard() {
             src="/assets/cards/camera_guy.png"
             alt=""
             fill
+            sizes="(min-width: 1280px) 40vw, (min-width: 1024px) 38vw"
             className="object-cover"
           />
         </div>
