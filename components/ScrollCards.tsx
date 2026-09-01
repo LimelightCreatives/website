@@ -67,9 +67,9 @@ export function ScrollCards() {
             {card.content}
           </div>
 
-          {/* {index < cards.length - 1 && (
+          {index < cards.length - 1 && (
             <div aria-hidden style={{ height: `${HOLD_VH}vh` }} />
-          )} */}
+          )}
         </div>
       ))}
     </section>
