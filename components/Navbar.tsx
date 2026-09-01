@@ -24,6 +24,12 @@ export default function Navbar() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
+      // Skip autohide on mobile — nav stays put
+      if (window.innerWidth < 768) {
+        setHidden(false);
+        return;
+      }
+
       const currentScrollY = window.scrollY;
 
       if (currentScrollY < 50) {
