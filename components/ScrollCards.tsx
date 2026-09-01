@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,6 +53,34 @@ export function ScrollCards() {
     { scope: sectionRef, dependencies: [] }
   );
 
+  useEffect(() => {
+    const setViewportHeight = () => {
+      document.documentElement.style.setProperty(
+        "--app-vh",
+        `${window.innerHeight * 0.01}px`
+      );
+    };
+
+    setViewportHeight();
+
+    // orientation change is a real resize; a plain 'resize' firing from
+    // address-bar show/hide is exactly what we want to *not* chase constantly,
+    // so debounce it
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(setViewportHeight, 200);
+    };
+
+    window.addEventListener("orientationchange", setViewportHeight);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("orientationchange", setViewportHeight);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section ref={sectionRef}>
       {cards.map((card, index) => (
@@ -62,8 +90,8 @@ export function ScrollCards() {
             ref={(el) => {
               cardRefs.current[index] = el;
             }}
-            className="relative min-h-[100svh] bg-[var(--background)] px-4 py-6 md:px-6"
-            style={{ zIndex: index + 1 }}
+            className="relative bg-[var(--background)] px-4 py-6 md:px-6"
+            style={{ zIndex: index + 1, minHeight: "calc(var(--app-vh, 1vh) * 100)" }}
           >
             {card.content}
           </div>
