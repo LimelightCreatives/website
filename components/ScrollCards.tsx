@@ -30,14 +30,10 @@ export function ScrollCards() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(
-  () => {
-      // lock the visual viewport so the address bar/navbar showing or
-      // hiding can't change scroll math at all
-      ScrollTrigger.normalizeScroll(true);
-
-      // keep this too, as a safety net for the newest iOS Safari edge case
-      // where the toolbar is forced to show/hide regardless
-      ScrollTrigger.config({ ignoreMobileResize: true });
+    () => {
+      ScrollTrigger.config({
+        ignoreMobileResize: true, // ignore address-bar-driven resize events on mobile
+      });
 
       cardRefs.current
         .filter((el): el is HTMLDivElement => el !== null)
@@ -65,7 +61,7 @@ export function ScrollCards() {
             ref={(el) => {
               cardRefs.current[index] = el;
             }}
-            className="relative min-h-[100svh] bg-[var(--background)] px-4 py-6 md:px-6"
+            className="relative min-h-[100dvh] bg-[var(--background)] px-4 py-6 md:px-6"
             style={{ zIndex: index + 1 }}
           >
             {card.content}
