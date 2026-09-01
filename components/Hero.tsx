@@ -58,8 +58,8 @@ function LimelightSquiggle(props: React.SVGProps<SVGSVGElement>) {
 
 export function Hero() {
   return (
-    <section className="mt-0 relative min-h-screen overflow-hidden">
-      <div className="mx-auto mt-8 relative z-10 flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 text-center">
+    <section className="mt-0 relative min-h-dvh overflow-hidden">
+      <div className="mx-auto mt-8 relative z-10 flex min-h-dvh max-w-7xl flex-col items-center justify-center px-6 text-center">
         <div className="relative">
           <h1 className="max-w-5xl text-[3.5rem] md:text-[clamp(3.75rem,6rem,10rem)] font-display leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
             Your chance to step
