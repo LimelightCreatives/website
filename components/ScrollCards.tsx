@@ -1,8 +1,17 @@
+"use client";
+
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { AboutCard } from "./cards/AboutCard";
 import { TimelineCard } from "./cards/TimelineCard";
 import { SponsorsCard } from "./cards/SponsorsCard";
 import { FAQCard } from "./cards/FAQCard";
 import { TeamCard } from "./cards/TeamCard";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   { id: "about", number: "01", content: <AboutCard /> },
@@ -12,19 +21,51 @@ const cards = [
   { id: "team", number: "05", content: <TeamCard /> },
 ];
 
+// how much extra scroll distance a card gets to sit fully visible
+// before the next card is allowed to start covering it
+const HOLD_VH = 40;
+
 export function ScrollCards() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(
+    () => {
+      cardRefs.current
+        .filter((el): el is HTMLDivElement => el !== null)
+        .forEach((el) => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: "bottom bottom",      // lock in place once the card has fully scrolled into view
+            endTrigger: sectionRef.current,
+            end: "bottom bottom",        // stay pinned (now hidden behind later cards) till the section ends
+            pin: true,
+            pinSpacing: false,           // don't reserve space — later cards scroll up over it
+            invalidateOnRefresh: true,
+          });
+        });
+    },
+    { scope: sectionRef, dependencies: [] }
+  );
+
   return (
-    <section className="px-4 py-16 md:px-6">
+    <section ref={sectionRef}>
       {cards.map((card, index) => (
-        <div
-          key={card.id}
-          id={card.id}
-          className="sticky top-6 mb-0 h-[calc(100vh-3rem)] overflow-hidden bg-[var(--background)]"
-          style={{
-            zIndex: index + 1,
-          }}
-        >
-          {card.content}
+        <div key={card.id}>
+          <div
+            id={card.id}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
+            className="relative min-h-[100dvh] bg-[var(--background)] px-4 py-6 md:px-6"
+            style={{ zIndex: index + 1 }}
+          >
+            {card.content}
+          </div>
+
+          {index < cards.length - 1 && (
+            <div aria-hidden style={{ height: `${HOLD_VH}vh` }} />
+          )}
         </div>
       ))}
     </section>
