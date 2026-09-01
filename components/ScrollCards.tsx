@@ -32,8 +32,7 @@ export function ScrollCards() {
   useGSAP(
     () => {
       ScrollTrigger.config({
-        ignoreMobileResize: true,
-        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+        ignoreMobileResize: true, // ignore address-bar-driven resize events on mobile
       });
 
       cardRefs.current
@@ -62,15 +61,15 @@ export function ScrollCards() {
             ref={(el) => {
               cardRefs.current[index] = el;
             }}
-            className="relative min-h-[100svh] bg-[var(--background)] px-4 py-6 md:px-6"
+            className="relative min-h-[100dvh] bg-[var(--background)] px-4 py-6 md:px-6"
             style={{ zIndex: index + 1 }}
           >
             {card.content}
           </div>
 
-          {index < cards.length - 1 && (
+          {/* {index < cards.length - 1 && (
             <div aria-hidden style={{ height: `${HOLD_VH}vh` }} />
-          )}
+          )} */}
         </div>
       ))}
     </section>

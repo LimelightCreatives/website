@@ -58,7 +58,7 @@ export default function Navbar() {
     card.style.position = "static";
 
     const targetTop =
-      card.getBoundingClientRect().top + window.scrollY - 24;
+      card.getBoundingClientRect().top + window.scrollY;
 
     // Restore the sticky positioning.
     card.style.position = previousPosition;
