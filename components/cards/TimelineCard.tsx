@@ -41,6 +41,7 @@ export function TimelineCard() {
               src="/assets/cards/bg2.png"
               alt=""
               fill
+              sizes="(min-width: 1024px) 435px"
               className="object-cover object-center"
             />
           </div>
