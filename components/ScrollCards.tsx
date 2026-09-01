@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -30,65 +30,28 @@ export function ScrollCards() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(
-  () => {
-    ScrollTrigger.config({ ignoreMobileResize: true });
-
-    cardRefs.current
-      .filter((el): el is HTMLDivElement => el !== null)
-      .forEach((el) => {
-        ScrollTrigger.create({
-          trigger: el,
-          start: "bottom bottom",
-          endTrigger: sectionRef.current,
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          invalidateOnRefresh: true,
-        });
+    () => {
+      ScrollTrigger.config({
+        ignoreMobileResize: true,
+        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
       });
 
-    const images = Array.from(document.querySelectorAll("img"));
-    Promise.all(
-      images.map((img) =>
-        img.complete
-          ? Promise.resolve()
-          : new Promise((res) => {
-              img.addEventListener("load", res, { once: true });
-              img.addEventListener("error", res, { once: true });
-            })
-      )
-    ).then(() => ScrollTrigger.refresh());
-  },
-  { scope: sectionRef, dependencies: [] }
-);
-
-  useEffect(() => {
-    const setViewportHeight = () => {
-      document.documentElement.style.setProperty(
-        "--app-vh",
-        `${window.innerHeight * 0.01}px`
-      );
-    };
-
-    setViewportHeight();
-
-    // orientation change is a real resize; a plain 'resize' firing from
-    // address-bar show/hide is exactly what we want to *not* chase constantly,
-    // so debounce it
-    let resizeTimeout: ReturnType<typeof setTimeout>;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(setViewportHeight, 200);
-    };
-
-    window.addEventListener("orientationchange", setViewportHeight);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("orientationchange", setViewportHeight);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      cardRefs.current
+        .filter((el): el is HTMLDivElement => el !== null)
+        .forEach((el) => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: "bottom bottom",
+            endTrigger: sectionRef.current,
+            end: "bottom bottom",
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true,
+          });
+        });
+    },
+    { scope: sectionRef, dependencies: [] }
+  );
 
   return (
     <section ref={sectionRef}>
@@ -99,8 +62,8 @@ export function ScrollCards() {
             ref={(el) => {
               cardRefs.current[index] = el;
             }}
-            className="relative bg-[var(--background)] px-4 py-6 md:px-6"
-            style={{ zIndex: index + 1, minHeight: "calc(var(--app-vh, 1vh) * 100)" }}
+            className="relative min-h-[100svh] bg-[var(--background)] px-4 py-6 md:px-6"
+            style={{ zIndex: index + 1 }}
           >
             {card.content}
           </div>
