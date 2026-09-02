@@ -5,7 +5,7 @@ export default function CodeOfConduct() {
     <LegalPage
       eyebrow="Legal / Code of Conduct"
       title="Code of conduct."
-      intro="Our Code of Conduct outlines the standards we expect from everyone involved with Limelight Creatives, and the steps we take when those expectations are not met."
+      intro="The Code of Conduct outlines the standards we expect from everyone involved with Limelight Creatives, and the steps we take when those expectations are not met."
       lastUpdated="31 August 2026"
       sections={[
         {
@@ -219,7 +219,7 @@ export default function CodeOfConduct() {
               <p className="mt-6">
                 Full details of our safeguarding approach are outlined in our{" "}
                 <a
-                  href="/safeguarding"
+                  href="/safeguarding-policy"
                   className="underline underline-offset-4 hover:opacity-50"
                 >
                   Safeguarding Policy
