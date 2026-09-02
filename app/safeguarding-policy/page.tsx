@@ -30,7 +30,7 @@ export default function Safeguarding() {
               <p className="mt-4">
                 Limelight is a youth-led creative organisation founded by
                 teenagers, for teenagers. Our mission is to empower young
-                filmmakers to collaborate, create, and tell stories safely.
+                filmmakers to collaborate, create, and tell stories.
               </p>
 
               <h3 className="mt-10 font-display text-2xl tracking-[-0.03em]">
