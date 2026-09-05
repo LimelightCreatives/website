@@ -111,7 +111,7 @@ export function TeamCard() {
     { name: "Justin Kresnadi", position: "Logistics", image: "/team/headshots/Justin.webp" },
     { name: "Meher Talwar", position: "Logistics", image: "/team/headshots/Meher.webp" },
     { name: "Olivia Li", position: "Event Management", image: "/team/headshots/Olivia Li.webp" },
-    { name: "Ontik Reza", position: "Sponsorship Outreach", image: "/team/headshots/Ontik.webp" },
+    { name: "Ontik Reza", position: "Founder", image: "/team/headshots/Ontik.webp" },
     { name: "Riham Ahmad", position: "Event Management", image: "/team/headshots/Riham.webp" },
     { name: "Theo Lagman", position: "Marketing", image: "/team/headshots/Theo.webp" },
   ];
