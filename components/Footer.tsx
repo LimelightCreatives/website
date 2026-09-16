@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden px-6 pb-6 pt-24 md:pt-32">
       {/* Footer details */}
-      <div className="mx-auto mt-16 max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         <div className="border-t-2 border-[var(--border)]" />
 
         <div className="flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
@@ -18,10 +18,6 @@ export function Footer() {
               height={64}
               width={256}
             />
-
-            <span className="text-sm font-body font-bold opacity-70">
-              Free film-a-thons for high schoolers.
-            </span>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-body font-bold">

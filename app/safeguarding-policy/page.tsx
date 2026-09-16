@@ -7,6 +7,7 @@ export default function Safeguarding() {
       title="Safeguarding policy."
       intro={
         <>
+          This policy is under active review and may be subject to update.
           Please direct any inquiries to{" "}
           <a
             href="mailto:inquiries@limelightcreatives.org"
@@ -17,7 +18,7 @@ export default function Safeguarding() {
         </>
       }
 
-      lastUpdated="31 August 2026"
+      lastUpdated="12 September 2026"
       sections={[
         {
           title: "Purpose",
@@ -29,8 +30,8 @@ export default function Safeguarding() {
 
               <p className="mt-4">
                 Limelight is a youth-led creative organisation founded by
-                teenagers, for teenagers. Our mission is to empower young
-                filmmakers to collaborate, create, and tell stories.
+                teenagers, for teenagers. Our mission is to empower young teen
+                filmmakers by spreading the art of storytelling.
               </p>
 
               <h3 className="mt-10 font-display text-2xl tracking-[-0.03em]">
@@ -55,7 +56,7 @@ export default function Safeguarding() {
               </p>
 
               <p className="mt-6">
-                We aim to reduce and identify risks before harm occurs by:
+                We aim to mitigate and identify risks before harm occurs by:
               </p>
 
               <ul className="mt-4 list-disc space-y-3 pl-6">
@@ -66,9 +67,10 @@ export default function Safeguarding() {
               </ul>
 
               <p className="mt-6">
-                Safeguarding is a universal responsibility. Every person
-                involved with Limelight has a vital role in maintaining a safe
-                environment.
+                Safeguarding, although ultimately Limelight&apos;s
+                responsibility, holds a universal weight on every associated
+                party. Every person involved with Limelight has a vital role in
+                maintaining a safe environment.
               </p>
             </>
           ),
@@ -95,7 +97,10 @@ export default function Safeguarding() {
                   Mentors, guest speakers, external vendors, sponsors, and
                   venue staff
                 </li>
-                <li>Any other individual present at an event</li>
+                <li>
+                  Any other individual present at the event or consuming event
+                  resources
+                </li>
               </ul>
 
               <p className="mt-6">It covers all event locations and activities, including:</p>
@@ -127,37 +132,57 @@ export default function Safeguarding() {
               <dl className="mt-6 space-y-6">
                 <div>
                   <dt className="font-semibold">
-                    Child / Young Person / Participant / Minor
+                    Participant
                   </dt>
                   <dd className="mt-2">
-                    Any person under the age of 18. For the purposes of
-                    Limelight events, this generally refers to participants
-                    aged 13–18.
+                    Any person between the ages of 13 and 18 (inclusive) who
+                    either attends an event or consumes event resources.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="font-semibold">Limelight</dt>
+                  <dd className="mt-2">
+                    The organisation Limelight Creatives, to which this policy
+                    belongs.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="font-semibold">Associated Parties</dt>
+                  <dd className="mt-2">
+                    Any party involved with Limelight Creatives, including but
+                    not limited to the founding team, staff, sponsors,
+                    mentors, volunteers, participants, and parents.
                   </dd>
                 </div>
 
                 <div>
                   <dt className="font-semibold">Confidentiality</dt>
                   <dd className="mt-2">
-                    The responsibility to handle personal and safeguarding
-                    information carefully and not share it unnecessarily.
+                    The responsibility of Limelight Creatives to handle
+                    personal and safeguarding information carefully and not
+                    share it unnecessarily.
                   </dd>
                 </div>
 
                 <div>
                   <dt className="font-semibold">Duty of Care</dt>
                   <dd className="mt-2">
-                    The overarching responsibility of Limelight to take
-                    reasonable steps to identify foreseeable risks and help
-                    protect the safety and wellbeing of people participating.
+                    The overarching responsibility of Limelight Creatives to
+                    take reasonable steps to identify foreseeable risks and to
+                    prioritise the protection, safety, and wellbeing of people
+                    participating.
                   </dd>
                 </div>
 
                 <div>
                   <dt className="font-semibold">Mentor / Volunteer</dt>
                   <dd className="mt-2">
-                    An individual above the age of 15 invited by Limelight to
-                    provide assistance, education, or support to participants.
+                    An individual invited by Limelight Creatives to provide
+                    assistance, education, or support to participants. This
+                    party does not need to be under 18 to be invited into the
+                    role.
                   </dd>
                 </div>
 
@@ -165,7 +190,7 @@ export default function Safeguarding() {
                   <dt className="font-semibold">Safeguarding Officer</dt>
                   <dd className="mt-2">
                     The individual responsible for handling concerns and
-                    overseeing this policy.
+                    overseeing this policy in its entirety.
                   </dd>
                 </div>
 
@@ -173,15 +198,7 @@ export default function Safeguarding() {
                   <dt className="font-semibold">WWCC</dt>
                   <dd className="mt-2">
                     &quot;Working With Children Check&quot;, a legal screening
-                    that assesses suitability to engage in child-related work.
-                  </dd>
-                </div>
-
-                <div>
-                  <dt className="font-semibold">Founders</dt>
-                  <dd className="mt-2">
-                    The founding team behind Limelight Creatives, responsible
-                    for organising and hosting the event.
+                    that approves suitability to engage in child-related work.
                   </dd>
                 </div>
               </dl>
@@ -195,20 +212,21 @@ export default function Safeguarding() {
             <>
               <ul className="list-disc space-y-4 pl-6">
                 <li>
-                  Everyone must be treated with respect and equality regardless
-                  of background, gender, or personal characteristics.
+                  Everyone must adhere to the Limelight Code of Conduct.
                 </li>
                 <li>
-                  Everyone must adhere to the Limelight Code of Conduct.
+                  Everyone must be treated with respect and equality
+                  regardless of background, gender, or personal
+                  characteristics.
                 </li>
                 <li>
                   All disputes should be reported through an evaluation of
                   their severity and frequency.
                 </li>
                 <li>
-                  Everyone must follow instructions from staff and mentors
-                  regarding equipment handling, venue rules, and safety
-                  protocols.
+                  Everyone must follow instructions from founders, officers,
+                  staff, volunteers, and mentors regarding equipment handling,
+                  venue rules, and safety protocols.
                 </li>
                 <li>
                   Everyone must avoid behaviour that may put others at risk
@@ -255,27 +273,28 @@ export default function Safeguarding() {
               </ul>
 
               <p className="mt-6">
-                Safeguarding Officers will be clearly identified to participants
-                where reasonably possible.
+                Safeguarding Officers will be clearly identified to
+                participants where reasonably possible.
               </p>
 
               <h3 className="mt-10 font-display text-2xl tracking-[-0.03em]">
-                5.3 Volunteers / Mentors / Organisers
+                5.3 Volunteers / Mentors
               </h3>
 
               <ul className="mt-4 list-disc space-y-3 pl-6">
                 <li>
                   Appointed individuals must model the behaviour expected of
-                  participants and uphold the values of Limelight at all times.
+                  participants and uphold the values of Limelight at all
+                  times.
                 </li>
                 <li>
-                  They must have the legally required WWCC approval for their
-                  role.
+                  Any non-teen volunteer or mentor requires WWCC legal
+                  approval for their role.
                 </li>
                 <li>
                   They must report any concern, disclosure, or breach of this
-                  policy to the Safeguarding Officer immediately and must never
-                  investigate it themselves.
+                  policy to the Safeguarding Officer immediately, and must
+                  never investigate it themselves.
                 </li>
               </ul>
 
@@ -284,9 +303,10 @@ export default function Safeguarding() {
               </h3>
 
               <p className="mt-4">
-                All event participants are expected to follow this safeguarding
-                policy and understand that violations may result in
-                consequences.
+                All event participants are expected to follow this
+                safeguarding policy, along with the Code of Conduct, and must
+                be fully aware of the consequences that may follow a
+                violation of this policy.
               </p>
 
               <p className="mt-6">Possible consequences include:</p>
@@ -309,10 +329,10 @@ export default function Safeguarding() {
               </h3>
 
               <p className="mt-4">
-                Parents and guardians must provide appropriate online or
-                written consent for participation, emergency contact details,
-                media consent, and any relevant medical or support needs on
-                behalf of participants who are legal minors.
+                Parents and guardians must provide either online or written
+                consent for participation, emergency contact details, media
+                consent, and must communicate any relevant medical or support
+                needs on behalf of participants who are legal minors.
               </p>
             </>
           ),
@@ -339,7 +359,7 @@ export default function Safeguarding() {
                 </li>
                 <li>
                   Adult-to-minor ratios are set in advance based on group size
-                  and age and are maintained throughout the event.
+                  and age, and are maintained throughout the event.
                 </li>
                 <li>
                   Any restricted equipment, material, or area is off-limits and
@@ -357,40 +377,18 @@ export default function Safeguarding() {
 
               <ul className="mt-4 list-disc space-y-3 pl-6">
                 <li>
-                  Guardians will provide consent for their child to attend the
-                  event through the pre-event check-in forms.
+                  A named staff member or volunteer runs check-in and
+                  check-out at a single, clearly marked point.
                 </li>
                 <li>
-                  A named staff member or volunteer runs check-in and check-out
-                  at a single, clearly marked point.
+                  Guardians will sign to give consent for their child to
+                  attend the event on the pre-event check-in forms.
+                </li>
+                <li>
+                  If participants are to potentially leave the venue during an
+                  event, they must have explicit written parental consent.
                 </li>
               </ul>
-
-              <p className="mt-6">
-                If participants are to leave the venue during an event, they
-                must satisfy at least one of the following conditions:
-              </p>
-
-              <ol className="mt-4 list-decimal space-y-3 pl-6">
-                <li>
-                  Permission from the guardian signing the relevant waiver has
-                  been given pre-emptively for the child to be dismissed early.
-                </li>
-                <li>
-                  In the event of unforeseeable circumstances, verbal
-                  permission from the guardian signing the waiver has been
-                  given before the child leaves.
-                </li>
-                <li>
-                  The parent or guardian has signed a Leave the Venue form, in
-                  which case the child may only leave at the designated time and
-                  when accompanied by event staff.
-                </li>
-                <li>
-                  The event is operating under emergency procedures, or the
-                  child requires external medical attention.
-                </li>
-              </ol>
 
               <h3 className="mt-10 font-display text-2xl tracking-[-0.03em]">
                 6.3 Participants / Mentors / Staff
@@ -404,6 +402,7 @@ export default function Safeguarding() {
                 <li>Full name</li>
                 <li>Date of birth</li>
                 <li>School and year</li>
+                <li>Address</li>
                 <li>Contact details, including phone number and email</li>
                 <li>
                   Guardian contact details, including phone number,
@@ -413,50 +412,41 @@ export default function Safeguarding() {
                   Emergency contact details, including phone number,
                   relationship to participant, and email
                 </li>
-                <li>Relevant medical or accessibility needs</li>
+                <li>Any relevant medical or access needs, including allergies or medications</li>
                 <li>Attendance restrictions, if any</li>
               </ul>
 
               <p className="mt-6">
-                For mentors, volunteers, or other staff over the age of 18, the
-                information we collect includes:
+                For mentors, volunteers, or any other staff, the information
+                we collect includes:
               </p>
 
               <ul className="mt-4 list-disc space-y-3 pl-6">
                 <li>Full name</li>
                 <li>Date of birth</li>
+                <li>Address</li>
                 <li>WWCC number and expiry date</li>
                 <li>Contact details, including phone number and email</li>
-                <li>Emergency contact details</li>
-                <li>Relevant medical or accessibility needs</li>
-                <li>Relevant certifications</li>
-              </ul>
-
-              <p className="mt-6">
-                For mentors, volunteers, or other staff between the ages of 15
-                and 18, the information we collect includes:
-              </p>
-
-              <ul className="mt-4 list-disc space-y-3 pl-6">
-                <li>Full name</li>
-                <li>Date of birth</li>
-                <li>School and year, if applicable</li>
-                <li>Contact details, including phone number and email</li>
-                <li>Guardian contact details</li>
-                <li>Emergency contact details</li>
-                <li>Relevant medical or accessibility needs</li>
-                <li>Relevant certifications</li>
+                <li>
+                  Emergency contact details, including phone number,
+                  relationship to participant, and email
+                </li>
+                <li>Any relevant medical or access needs, including allergies or medications</li>
+                <li>Any relevant certifications</li>
               </ul>
 
               <p className="mt-6">
                 This information is stored in a restricted-access system
                 (Google Sheets) and never in a publicly accessible system.
-              </p>
-
-              <p className="mt-6">
                 Only authorised Limelight Creatives staff can access this
                 information, and they may only use it for purposes necessary
                 for the event and/or the participant&apos;s attendance.
+              </p>
+
+              <p className="mt-6">
+                Data will be deleted when necessary. More information about
+                data collection, storage, and deletion can be found in our
+                Privacy Policy.
               </p>
 
               <h3 className="mt-10 font-display text-2xl tracking-[-0.03em]">
@@ -466,13 +456,13 @@ export default function Safeguarding() {
               <ul className="mt-4 list-disc space-y-3 pl-6">
                 <li>
                   Treat everybody at the event with respect. Bullying,
-                  harassment, exclusion, discriminatory language, and offensive
-                  jokes are not acceptable.
+                  harassment, exclusion, discriminatory language, and
+                  offensive jokes are not acceptable.
                 </li>
                 <li>
                   Follow reasonable instructions from staff and mentors,
-                  including venue rules, equipment usage rules, and off-limits
-                  areas.
+                  including venue rules, equipment usage rules, and
+                  off-limits areas.
                 </li>
                 <li>
                   No physical aggression, threats, or intimidation, either in
@@ -488,8 +478,8 @@ export default function Safeguarding() {
                   share images of anybody at the event without their consent.
                 </li>
                 <li>
-                  Personal devices and phones must be used respectfully and not
-                  to capture inappropriate content.
+                  Personal devices and phones must be used respectfully and
+                  not to capture inappropriate content.
                 </li>
                 <li>
                   Anyone who breaches these standards will be spoken to by the
@@ -504,8 +494,8 @@ export default function Safeguarding() {
 
               <p className="mt-4">
                 If a minor is in immediate physical danger, call emergency
-                services first, then notify the Safeguarding Officer as soon as
-                it is safe to do so.
+                services first, then notify the Safeguarding Officer as soon
+                as it is safe to do so.
               </p>
 
               <p className="mt-6">
@@ -516,7 +506,7 @@ export default function Safeguarding() {
                   rel="noopener noreferrer"
                   className="underline underline-offset-4 hover:opacity-50"
                 >
-                  Guide to Severity Designation &amp; Reporting
+                  Incident Severity Guide
                 </a>
                 .
               </p>
@@ -547,8 +537,8 @@ export default function Safeguarding() {
                 </li>
                 <li>
                   Limelight aims, wherever reasonably possible, to have a
-                  person with appropriate first-aid qualifications on the event
-                  campus.
+                  person with appropriate first-aid qualifications on the
+                  campus of the event.
                 </li>
               </ul>
             </>
@@ -623,14 +613,16 @@ export default function Safeguarding() {
 
               <p className="mt-4">
                 For participants, Limelight will obtain appropriate parent or
-                guardian consent before participation where required, including
-                for:
+                guardian consent before participation where required,
+                including for:
               </p>
 
               <ul className="mt-4 list-disc space-y-3 pl-6">
                 <li>Permission to participate in the event</li>
                 <li>Emergency contact information</li>
-                <li>Relevant medical, accessibility, or support information</li>
+                <li>
+                  Relevant medical, accessibility, or support information
+                </li>
                 <li>
                   Appropriate media or photography consent, where applicable
                 </li>

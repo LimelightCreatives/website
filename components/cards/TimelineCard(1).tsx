@@ -13,64 +13,44 @@ const KEY_DATES = [
 type Step = {
   n: string;
   title: React.ReactNode;
-  rotate: number;
+  /** Swap the placeholder for a real photo by filling this in. */
   image?: { src: string; alt: string };
 };
 
 const STEPS: Step[] = [
   {
     n: "01",
-    rotate: -1.5,
     title: (
       <>
-        Sign up for <em className="accent">Limelight GENESIS</em>
+        Sign up for <em className="accent">Limelight Genesis</em>
       </>
     ),
-    image: {
-      src: "/assets/cards/steps/step1.JPG",
-      alt: "alt"
-    }
   },
   {
     n: "02",
-    rotate: 2,
     title: (
       <>
         Grab <em className="accent">friends</em> (or make new friends!) and form
         a <em className="accent">team of 3</em>
       </>
     ),
-    image: {
-      src: "/assets/cards/steps/step2.JPG",
-      alt: "alt"
-    }
   },
   {
     n: "03",
-    rotate: -2.5,
     title: (
       <>
         Learn from <em className="accent">filmmaking workshops</em>, enjoy{" "}
         <em className="accent">free food and merch!</em>
       </>
     ),
-    image: {
-      src: "/assets/cards/steps/step3.jpg",
-      alt: "alt"
-    }
   },
   {
     n: "04",
-    rotate: 1.5,
     title: (
       <>
         Make a film &amp; <em className="accent accent-lime">win awards!</em>
       </>
     ),
-    image: {
-      src: "/assets/cards/steps/step4.JPG",
-      alt: "alt"
-    }
   },
 ];
 
@@ -80,7 +60,7 @@ type Slot = { time: string; name: string; kind: Kind; tag?: string };
 
 const DAY_ONE: Slot[] = [
   { time: "8:30 AM", name: "Doors open", kind: "open" },
-  { time: "9:00 AM", name: "Opening ceremony", kind: "work" },
+  { time: "9:00 AM", name: "Opening ceremony", kind: "milestone" },
   { time: "9:30 AM", name: "Working time", kind: "work" },
   {
     time: "10:00 AM",
@@ -96,7 +76,7 @@ const DAY_ONE: Slot[] = [
   },
   { time: "2:00 PM", name: "Lunch", kind: "break" },
   { time: "3:00 PM", name: "Working time", kind: "work" },
-  { time: "6:30 PM", name: "Day 1 ends", kind: "work" },
+  { time: "6:30 PM", name: "Day 1 ends", kind: "milestone" },
 ];
 
 const DAY_TWO: Slot[] = [
@@ -110,10 +90,10 @@ const DAY_TWO: Slot[] = [
   },
   { time: "2:00 PM", name: "Lunch", kind: "break" },
   { time: "3:00 PM", name: "Working time", kind: "work" },
-  { time: "3:30 PM", name: "Video submissions", kind: "work" },
-  { time: "4:30 PM", name: "Judging", kind: "work" },
-  { time: "5:30 PM", name: "Closing ceremony", kind: "work" },
-  { time: "6:30 PM", name: "Day 2 ends", kind: "work" },
+  { time: "3:30 PM", name: "Video submissions", kind: "milestone" },
+  { time: "4:30 PM", name: "Judging", kind: "milestone" },
+  { time: "5:30 PM", name: "Closing ceremony", kind: "milestone" },
+  { time: "6:30 PM", name: "Day 2 ends", kind: "milestone" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -155,12 +135,11 @@ function Squiggle({ className = "" }: { className?: string }) {
 /*  Steps                                                              */
 /* ------------------------------------------------------------------ */
 
+/** Same frame treatment as the camera photo on the tan site: accent block
+ *  offset down-right, 2px black border, cream panel, slight counter-rotation. */
 function StepFrame({ step }: { step: Step }) {
   return (
-    <div
-      className="relative aspect-[4/3]"
-      style={{ transform: `rotate(${step.rotate}deg)` }}
-    >
+    <div className="relative aspect-[4/3] rotate-[-1.5deg]">
       <div
         aria-hidden="true"
         className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--lc-accent)] md:translate-x-4 md:translate-y-4"
@@ -258,7 +237,7 @@ function Day({
   slots: Slot[];
 }) {
   return (
-    <section className="bg-[var(--lc-cream)]/[0.04] p-6 md:p-8">
+    <section className="rounded-sm border border-current/15 bg-[var(--lc-cream)]/[0.04] p-6 md:p-8">
       <header className="mb-2 flex items-baseline justify-between gap-4">
         <h4 className="font-display text-3xl md:text-4xl">{label}</h4>
         <span className="font-body text-sm text-[var(--lc-mint)]">{date}</span>
@@ -284,8 +263,8 @@ export function TimelineCard() {
       style={
         {
           "--lc-cream": "var(--background)",
-          "--lc-green": "#01995C",
           "--lc-accent": "var(--ontik-accent, #01995C)",
+          "--lc-green": "#01995C",
           "--lc-green-bright": "#3FBF86",
           "--lc-mint": "#81D7D4",
           "--lc-lime": "#AAC94F",
@@ -340,7 +319,21 @@ export function TimelineCard() {
       {/* ---------------------------------------------------------- */}
       {/*  How it works                                               */}
       {/* ---------------------------------------------------------- */}
-      <div className="relative px-6 pb-20 md:px-16 md:pb-28">
+      <div className="relative px-6 pb-20 pt-8 md:px-16 md:pb-28">
+        <Sparkle className="absolute right-10 top-4 hidden h-6 w-6 text-[var(--lc-mint)] md:block" />
+
+        <h3 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.9] tracking-[-0.04em]">
+          Four steps from
+          <br />
+          zero to premiere
+        </h3>
+        <Squiggle className="mt-3 h-3 w-[min(22rem,70%)] text-[var(--lc-green-bright)]" />
+
+        <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-[var(--lc-cream)]/75">
+          No experience needed. Bring an idea, or turn up and find one — we
+          hand you the camera, the workshops and the weekend.
+        </p>
+
         <ol className="mt-14 space-y-16 md:space-y-20">
           {STEPS.map((step, i) => (
             <StepRow key={step.n} step={step} index={i} />
@@ -351,11 +344,18 @@ export function TimelineCard() {
       {/* ---------------------------------------------------------- */}
       {/*  Schedule                                                   */}
       {/* ---------------------------------------------------------- */}
-      <div className="relative px-6 pb-8 md:px-16 md:pb-16">
-        
+      <div className="relative px-6 pb-20 md:px-16 md:pb-28">
+        <Sparkle className="absolute left-4 top-10 hidden h-5 w-5 text-[var(--lc-lime)] md:block" />
+
         <h3 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.9] tracking-[-0.04em]">
-          Schedule
+          How the weekend runs
         </h3>
+        <Squiggle className="mt-3 h-3 w-[min(22rem,70%)] text-[var(--lc-green-bright)]" />
+
+        <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-[var(--lc-cream)]/75">
+          Two full days, October 24–25. Workshops are run by filmmakers; the
+          rest of the time the room is yours.
+        </p>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8">
           <Day label="Day one" date="Fri 24 Oct" slots={DAY_ONE} />
@@ -366,6 +366,42 @@ export function TimelineCard() {
       {/* ---------------------------------------------------------- */}
       {/*  Close                                                      */}
       {/* ---------------------------------------------------------- */}
+      <div className="relative overflow-hidden bg-[var(--lc-green)] px-6 py-16 text-[var(--lc-cream)] md:px-16 md:py-20">
+        <Sparkle className="absolute right-8 top-8 h-8 w-8 text-[var(--lc-cream)]/30" />
+        <Sparkle className="absolute bottom-10 right-24 h-4 w-4 text-[var(--lc-cream)]/30" />
+
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h3 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] tracking-[-0.04em]">
+              Bring three friends.
+              <br />
+              Leave with a film.
+            </h3>
+            <p className="mt-4 max-w-md font-body text-lg leading-relaxed">
+              RSVPs open August 30. Registration forms go out October 18.
+            </p>
+          </div>
+
+          <a
+            href="#rsvp"
+            className="inline-block shrink-0 bg-[var(--lc-cream)] px-8 py-4 font-body text-base tracking-[0.06em] text-[var(--foreground)] outline-offset-4 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[var(--lc-cream)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+          >
+            RSVP for Genesis
+          </a>
+        </div>
+      </div>
+
+      {/* accent styling for the emphasised words inside the steps */}
+      <style>{`
+        .lc-card .accent {
+          font-style: normal;
+          font-weight: 700;
+          color: var(--lc-green-bright);
+        }
+        .lc-card .accent-lime {
+          color: var(--lc-lime);
+        }
+      `}</style>
     </article>
   );
 }

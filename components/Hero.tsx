@@ -1,5 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/Button";
-import Image from "next/image";
 
 function SparkleBig(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -56,10 +59,107 @@ function LimelightSquiggle(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+function SponsorModal({ onClose }: { onClose: () => void }) {
+  const email = "inquiries@limelightcreatives.org";
+
+  // lock background scroll while open
+  useEffect(() => {
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, []);
+
+  // close on escape
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-6 backdrop-blur-sm bg-black/40"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-sm"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black md:translate-x-4 md:translate-y-4" />
+
+        <div
+          className="relative border-2 border-black p-8"
+          style={{ background: "var(--background)" }}
+        >
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-4 top-4 text-xl leading-none"
+            style={{ color: "var(--foreground)" }}
+          >
+            &times;
+          </button>
+
+          <h2
+            className="mb-2 text-2xl font-display font-bold"
+            style={{ color: "var(--foreground)" }}
+          >
+            Interested in sponsoring?
+          </h2>
+          <p
+            className="mb-6 text-sm"
+            style={{ color: "var(--foreground)", opacity: 0.65 }}
+          >
+            Reach out and we&rsquo;ll get back to you.
+          </p>
+
+          <a    
+            href={`mailto:${email}`}
+            className="inline-block text-lg font-body font-semibold underline"
+            style={{ color: "var(--foreground)" }}
+          >
+            {email}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Hero() {
+  const router = useRouter();
+  const [showSponsorModal, setShowSponsorModal] = useState(
+    () => typeof window !== "undefined" && window.location.hash === "#contact"
+  );
+
+  function openSponsorModal(e: React.MouseEvent) {
+    e.preventDefault();
+    router.push("/#contact");
+    setShowSponsorModal(true);
+  }
+
+  function closeSponsorModal() {
+    setShowSponsorModal(false);
+    router.push("/");
+  }
+
   return (
     <section className="mt-0 relative min-h-dvh overflow-hidden">
       <div className="mx-auto mt-8 relative z-10 flex min-h-dvh max-w-7xl flex-col items-center justify-center px-6 text-center">
+        
+        <a
+          href="#timeline"
+          className="mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-sm font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
+        >
+          Launching Limelight GENESIS, Oct 24-25 @ La Trobe University Sydney Campus!
+          <span aria-hidden="true">&gt;</span>
+        </a>
+
         <div className="relative">
           <h1 className="max-w-5xl text-[3.5rem] md:text-[clamp(3.75rem,6rem,10rem)] font-display leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
             Your chance to step
@@ -95,13 +195,12 @@ export function Hero() {
           </Button>
         </div>
 
-        <a
-          className="mt-8"
-          href="mailto:inquiries@limelightcreatives.org"
-        >
+        <a className="mt-8" href="/#contact" onClick={openSponsorModal}>
           <u>Interested in sponsoring?</u>
         </a>
       </div>
+
+      {showSponsorModal && <SponsorModal onClose={closeSponsorModal} />}
     </section>
   );
 }
