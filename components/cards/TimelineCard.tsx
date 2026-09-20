@@ -191,18 +191,20 @@ function StepRow({ step, index }: { step: Step; index: number }) {
   const flip = index % 2 === 1;
 
   return (
-    <li className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-      <div className={`pr-4 md:pr-5 ${flip ? "md:order-2" : ""}`}>
-        <StepFrame step={step} />
-      </div>
+    <li className="border-t border-current/25 pt-16 first:border-t-0 first:pt-0 md:pt-20">
+      <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
+        <div className={`pr-4 md:pr-5 ${flip ? "md:order-2" : ""}`}>
+          <StepFrame step={step} />
+        </div>
 
-      <div className={flip ? "md:order-1 md:text-right" : ""}>
-        <span className="font-body text-sm tracking-[0.2em] text-[var(--lc-mint)]">
-          Step {step.n}
-        </span>
-        <p className="mt-3 font-display text-[clamp(1.75rem,3.4vw,2.9rem)] leading-[1.05] tracking-[-0.02em]">
-          {step.title}
-        </p>
+        <div className={flip ? "md:order-1 md:text-right" : ""}>
+          <span className="font-body text-sm tracking-[0.2em] text-[var(--lc-mint)]">
+            Step {step.n}
+          </span>
+          <p className="mt-3 font-display text-[clamp(1.75rem,3.4vw,2.9rem)] leading-[1.05] tracking-[-0.02em]">
+            {step.title}
+          </p>
+        </div>
       </div>
     </li>
   );
@@ -308,9 +310,10 @@ export function TimelineCard() {
           </h2>
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
-            Limelight Creatives is launching our very first film-a-thon this
-            Spring holidays. Two days to craft your very own short film based on
-            a theme!
+            This Spring holidays, Limelight Creatives is running our very first film-a-thon, 
+            good news: you’re invited! Over two days, you’ll learn how to write, shoot, 
+            and edit your own short film. No experience needed, just bring your ideas and a 
+            crew of new friends.
           </p>
 
           <div className="mt-12 max-w-3xl space-y-4">
@@ -358,8 +361,8 @@ export function TimelineCard() {
         </h3>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8">
-          <Day label="Day one" date="Fri 24 Oct" slots={DAY_ONE} />
-          <Day label="Day two" date="Sat 25 Oct" slots={DAY_TWO} />
+          <Day label="Day one" date="Sat 24 Oct" slots={DAY_ONE} />
+          <Day label="Day two" date="Sun 25 Oct" slots={DAY_TWO} />
         </div>
       </div>
 
