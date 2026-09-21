@@ -138,14 +138,26 @@ export function FAQCard() {
                       </p>
                     </div>
                   </div>
+                  
                 </div>
+                
               );
             })}
           </div>
+          <p className="mt-6 max-w-3xl pl-4 font-body">
+            Got more questions as a parent or guardian?{" "}
+            <a
+              href="/policies/Limelight Genesis Parents Guide.pdf"
+              className="font-bold underline decoration-[var(--ontik-accent)] underline-offset-4 transition-colors hover:text-[var(--ontik-accent)]"
+            >
+              Read our parents&apos; guide
+            </a>
+            .
+          </p>
         </div>
       </div>
 
-      <div className="absolute right-[2vw] top-1/2 z-20 hidden aspect-[4/3] w-[38vw] max-w-6xl -translate-y-1/2 rotate-[1.5deg] lg:block xl:right-[5vw] xl:w-[40vw]">
+      <div className="absolute right-[3vw] top-1/2 z-20 hidden aspect-[4/3] w-[38vw] max-w-6xl -translate-y-1/2 rotate-[1.5deg] lg:block xl:right-[5vw] xl:w-[40vw]">
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[var(--ontik-accent)] md:translate-x-4 md:translate-y-4" />
 
         <div className="absolute inset-0 overflow-hidden border-2 border-black bg-[var(--background)]">
