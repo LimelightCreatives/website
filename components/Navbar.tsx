@@ -55,10 +55,6 @@ export default function Navbar() {
 
     if (!card) return;
 
-    /*
-     * Temporarily remove sticky positioning so we can measure
-     * where the card naturally exists in the document.
-     */
     const previousPosition = card.style.position;
 
     card.style.position = "static";

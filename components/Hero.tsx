@@ -1,8 +1,23 @@
 "use client";
 
+import { SponsorModal } from "@/components/SponsorModal";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/Button";
+
+// Swap these placeholder photos for real event stills — drop files in
+// /public/images/polaroids/ (or wherever your assets live) and update the
+// paths below. VIDEO_THUMB should be a still frame from the intro video;
+// the actual clip goes in VIDEO_SRC.
+const PHOTO_1 = "assets/cards/steps/step1.JPG";
+const PHOTO_2 = "assets/cards/steps/step1.JPG";
+const PHOTO_3 = "assets/cards/steps/step1.JPG";
+
+const YOUTUBE_ID = "DHbpky37LH0";
+// Auto-pulls the thumbnail from YouTube, so no manual still is needed.
+// Swap in your own image URL here if you'd rather use a custom frame.
+const VIDEO_THUMB = `https://i.ytimg.com/vi/${YOUTUBE_ID}/hqdefault.jpg`;
+const VIDEO_EMBED_SRC = `https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`;
 
 function SparkleBig(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -59,9 +74,71 @@ function LimelightSquiggle(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function SponsorModal({ onClose }: { onClose: () => void }) {
-  const email = "inquiries@limelightcreatives.org";
+function Polaroid({
+  src,
+  alt,
+  caption,
+  rotate = 0,
+  className = "",
+  isVideo = false,
+  decorative = false,
+  onClick,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  rotate?: number;
+  className?: string;
+  isVideo?: boolean;
+  decorative?: boolean;
+  onClick?: () => void;
+}) {
+  const Wrapper: "button" | "div" = onClick ? "button" : "div";
 
+  return (
+    <Wrapper
+      type={onClick ? "button" : undefined}
+      onClick={onClick}
+      aria-hidden={decorative ? true : undefined}
+      aria-label={onClick && !decorative ? alt : undefined}
+      className={`block bg-white p-2.5 pb-4 shadow-[0_10px_24px_rgba(0,0,0,0.28)] ${
+        onClick
+          ? "group cursor-pointer motion-safe:transition-transform motion-safe:hover:scale-105 focus-visible:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ontik-accent)]"
+          : ""
+      } ${className}`}
+      style={{ transform: `rotate(${rotate}deg)` }}
+    >
+      <span className="relative block aspect-[16/14] w-full overflow-hidden bg-neutral-300">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={decorative ? "" : alt}
+          className="h-full w-full object-cover"
+        />
+        {isVideo && (
+          <span className="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors group-hover:bg-black/35">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-black shadow-md">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="ml-0.5 h-4 w-4"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+          </span>
+        )}
+      </span>
+      {caption && (
+        <span className="mt-2.5 block text-center font-body text-xs text-black/60">
+          {caption}
+        </span>
+      )}
+    </Wrapper>
+  );
+}
+
+function VideoModal({ onClose }: { onClose: () => void }) {
   // lock background scroll while open
   useEffect(() => {
     const original = document.body.style.overflow;
@@ -82,49 +159,34 @@ function SponsorModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center px-6 backdrop-blur-sm bg-black/40"
+      className="fixed inset-0 z-50 flex items-center justify-center px-6 backdrop-blur-sm bg-black/60"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-sm"
+        className="relative w-full max-w-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black md:translate-x-4 md:translate-y-4" />
 
-        <div
-          className="relative border-2 border-black p-8"
-          style={{ background: "var(--background)" }}
-        >
+        <div className="relative border-2 border-black bg-black">
           <button
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="absolute right-4 top-4 text-xl leading-none"
-            style={{ color: "var(--foreground)" }}
+            className="absolute right-4 top-4 z-10 text-2xl leading-none text-white"
           >
             &times;
           </button>
 
-          <h2
-            className="mb-2 text-2xl font-display font-bold"
-            style={{ color: "var(--foreground)" }}
-          >
-            Interested in sponsoring?
-          </h2>
-          <p
-            className="mb-6 text-sm"
-            style={{ color: "var(--foreground)", opacity: 0.65 }}
-          >
-            Reach out and we&rsquo;ll get back to you.
-          </p>
-
-          <a    
-            href={`mailto:${email}`}
-            className="inline-block text-lg font-body font-semibold underline"
-            style={{ color: "var(--foreground)" }}
-          >
-            {email}
-          </a>
+          <div className="aspect-video w-full">
+            <iframe
+              src={VIDEO_EMBED_SRC}
+              title="Limelight intro video"
+              className="h-full w-full"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -136,6 +198,7 @@ export function Hero() {
   const [showSponsorModal, setShowSponsorModal] = useState(
     () => typeof window !== "undefined" && window.location.hash === "#contact"
   );
+  const [showVideoModal, setShowVideoModal] = useState(false);
 
   function openSponsorModal(e: React.MouseEvent) {
     e.preventDefault();
@@ -150,13 +213,57 @@ export function Hero() {
 
   return (
     <section className="mt-0 relative min-h-dvh overflow-hidden">
-      <div className="mx-auto mt-8 relative z-10 flex min-h-dvh max-w-7xl flex-col items-center justify-center px-6 text-center">
-        
+      {/* <Polaroid
+        src={PHOTO_1}
+        alt="Students filming a scene at a past Limelight event"
+        rotate={-8}
+        className="absolute z-0 hidden top-12 -left-10 w-42 lg:block xl:w-46"
+      />
+      <Polaroid
+        src={PHOTO_2}
+        alt="A student behind the camera at a past Limelight event"
+        rotate={7}
+        className="absolute z-0 hidden top-[24%] -right-12 w-42 lg:block xl:w-54"
+      />
+      <Polaroid
+        src={PHOTO_3}
+        alt="Students reviewing footage together at a past Limelight event"
+        rotate={-3}
+        className="absolute z-0 hidden bottom-24 left-5 w-38 lg:block xl:w-52"
+      /> */}
+      <Polaroid
+        src={VIDEO_THUMB}
+        alt="Watch the Limelight intro video"
+        caption="watch the intro"
+        rotate={5}
+        isVideo
+        onClick={() => setShowVideoModal(true)}
+        className="absolute z-0 hidden bottom-24 right-16 w-48 lg:block xl:w-64"
+      />
+
+      {/* Corner peeks — mobile/tablet only, purely decorative
+      <Polaroid
+        src={PHOTO_2}
+        alt=""
+        decorative
+        rotate={10}
+        className="absolute z-0 top-6 -right-8 w-25 lg:hidden"
+      />
+      <Polaroid
+        src={PHOTO_3}
+        alt=""
+        decorative
+        rotate={-9}
+        className="absolute z-0 bottom-6 -left-8 w-25 lg:hidden"
+      /> */}
+
+      <div className="mx-auto mt-8 relative z-10 flex min-h-dvh max-w-7xl flex-col items-center justify-center px-6 text-center pointer-events-none">
         <a
           href="#timeline"
-          className="mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-sm font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
+          className="pointer-events-auto mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-sm font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
         >
-          Launching Limelight GENESIS, Oct 24-25 @ La Trobe University Sydney Campus!
+          Launching Limelight GENESIS, Oct 24-25 @ La Trobe University Sydney
+          Campus!
           <span aria-hidden="true">&gt;</span>
         </a>
 
@@ -188,19 +295,33 @@ export function Hero() {
           Limelight Creatives run free film-a-thons for high schoolers.
         </p>
 
-        <div className="mt-8 flex gap-4 text-lg">
+        <div className="pointer-events-auto mt-8 flex gap-4 text-lg">
           <Button href="#apply">REGISTER INTEREST {">"}</Button>
           <Button href="#timeline" variant="secondary">
             WHAT&apos;S NEXT
           </Button>
         </div>
 
-        <a className="mt-8" href="/#contact" onClick={openSponsorModal}>
+        {/* Video polaroid — mobile/tablet only, sits under the CTA buttons */}
+        <Polaroid
+          src={VIDEO_THUMB}
+          alt="Watch the Limelight intro video"
+          caption="watch the intro"
+          rotate={-2}
+          isVideo
+          onClick={() => setShowVideoModal(true)}
+          className="pointer-events-auto mt-8 w-64 lg:hidden"
+        />
+
+        <a className="pointer-events-auto mt-8" href="/#contact" onClick={openSponsorModal}>
           <u>Interested in sponsoring?</u>
         </a>
       </div>
 
       {showSponsorModal && <SponsorModal onClose={closeSponsorModal} />}
+      {showVideoModal && (
+        <VideoModal onClose={() => setShowVideoModal(false)} />
+      )}
     </section>
   );
 }

@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = [
   { id: "about", number: "01", content: <AboutCard /> },
   { id: "timeline", number: "02", content: <TimelineCard /> },
-  // { id: "sponsors", number: "03", content: <SponsorsCard /> },
+  { id: "sponsors", number: "03", content: <SponsorsCard /> },
   { id: "faq", number: "04", content: <FAQCard /> },
   { id: "team", number: "05", content: <TeamCard /> },
 ];

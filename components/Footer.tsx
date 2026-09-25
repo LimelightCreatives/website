@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { SiYoutube, SiInstagram, SiTiktok } from '@icons-pack/react-simple-icons';
+
 
 export function Footer() {
   return (
@@ -43,9 +45,36 @@ export function Footer() {
             </Link>
           </div>
 
-          <p className="text-sm font-body font-bold">
-            made with <span aria-label="love">♥</span> by LIMELIGHT CREATIVES
-          </p>
+          <div className="flex items-center gap-8">
+            <Link
+              href="https://www.youtube.com/@LimelightCreatives"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtube"
+              className="transition-opacity hover:opacity-50"
+            >
+              <SiYoutube size={30} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/_limelightcreatives"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="transition-opacity hover:opacity-50"
+            >
+              <SiInstagram size={30} />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@_limelightcreatives"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="transition-opacity hover:opacity-50"
+            >
+              <SiTiktok size={30} />
+            </Link>
+            
+          </div>
         </div>
       </div>
     </footer>
