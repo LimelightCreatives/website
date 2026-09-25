@@ -57,9 +57,9 @@ function StickerFilter() {
 }
 
 const SIZES = {
-  featured: "h-24 text-3xl md:h-32 md:text-4xl",
-  secondary: "h-14 text-xl md:h-16 md:text-2xl",
-  tertiary: "h-10 text-base md:h-12 md:text-lg",
+  featured: "w-64 text-3xl md:w-64 md:text-4xl",
+  secondary: "w-14 text-xl md:w-16 md:text-2xl",
+  tertiary: "w-10 text-base md:w-12 md:text-lg",
 } as const;
 
 // Slight tilts so the stickers feel hand-placed
@@ -83,13 +83,12 @@ function Sticker({
         className={`flex items-center justify-center [filter:url(#sticker)] ${SIZES[size]}`}
       >
         {sponsor.logoSrc ? (
-          <a href={sponsor.link}>
+          <a href={sponsor.link} className="block h-full">
             <img
               src={sponsor.logoSrc}
               alt={sponsor.name}
-              className="h-full w-auto object-contain"
+              className="h-auto w-full object-contain"
               draggable={false}
-  
             />
           </a>
         ) : (
@@ -153,22 +152,30 @@ return (
           </a>
 
 
-          <div className="mt-24 flex flex-col items-center gap-4 md:gap-6">
-            {rows.map((row, r) => (
-              <div
-                key={r}
-                className="flex flex-wrap items-center justify-center gap-x-6 gap-y-16 md:gap-x-10"
-              >
-                {row.sponsors.map((sponsor, i) => (
-                  <Sticker
-                    key={`${r}-${i}`}
-                    sponsor={sponsor}
-                    size={row.size}
-                    index={counter++}
-                  />
-                ))}
-              </div>
-            ))}
+          <div
+            className="mt-12 rounded-lg p-8 md:p-12"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, var(--foreground) 0, transparent 1px)`,
+              backgroundSize: "25px 25px",
+            }}
+          >
+            <div className="flex flex-col items-center gap-4 md:gap-6">
+              {rows.map((row, r) => (
+                <div
+                  key={r}
+                  className="flex flex-wrap items-center justify-center gap-x-6 gap-y-16 md:gap-x-10"
+                >
+                  {row.sponsors.map((sponsor, i) => (
+                    <Sticker
+                      key={`${r}-${i}`}
+                      sponsor={sponsor}
+                      size={row.size}
+                      index={counter++}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
