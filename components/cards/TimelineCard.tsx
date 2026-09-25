@@ -209,7 +209,7 @@ function StepRow({ step, index }: { step: Step; index: number }) {
             flip ? "md:order-1 md:items-end md:text-right" : "md:items-start"
           }`}
         >
-          <span className="font-body text-sm tracking-[0.2em] text-[var(--lime)]">
+          <span className="font-body text-sm tracking-[0.2em] text-[var(--lc-mint)]">
             Step {step.n}
           </span>
           <p className="mt-3 font-display text-[clamp(1.75rem,3.4vw,2.9rem)] leading-[1.05] tracking-[-0.02em]">
