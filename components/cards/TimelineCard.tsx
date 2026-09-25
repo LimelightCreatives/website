@@ -155,10 +155,18 @@ function Squiggle({ className = "" }: { className?: string }) {
 /*  Steps                                                              */
 /* ------------------------------------------------------------------ */
 
-function StepFrame({ step }: { step: Step }) {
+function StepFrame({
+  step,
+  align = "left",
+}: {
+  step: Step;
+  align?: "left" | "right";
+}) {
   return (
     <div
-      className="relative aspect-[4/3]"
+      className={`relative aspect-[4/3] w-full max-w-[560px] ${
+        align === "right" ? "ml-auto" : "mr-auto"
+      }`}
       style={{ transform: `rotate(${step.rotate}deg)` }}
     >
       <div
@@ -186,19 +194,22 @@ function StepFrame({ step }: { step: Step }) {
     </div>
   );
 }
-
 function StepRow({ step, index }: { step: Step; index: number }) {
   const flip = index % 2 === 1;
 
   return (
     <li className="border-t border-current/25 pt-16 first:border-t-0 first:pt-0 md:pt-20">
-      <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-        <div className={`pr-4 md:pr-5 ${flip ? "md:order-2" : ""}`}>
-          <StepFrame step={step} />
+      <div className="bg-[var(--lc-cream)]/[0.04] grid items-center gap-6 p-6 md:mx-0 md:grid-cols-2 md:gap-12 md:p-10">
+        <div className={flip ? "md:order-2" : ""}>
+          <StepFrame step={step} align={flip ? "right" : "left"} />
         </div>
 
-        <div className={flip ? "md:order-1 md:text-right" : ""}>
-          <span className="font-body text-sm tracking-[0.2em] text-[var(--lc-mint)]">
+        <div
+          className={`flex flex-col ${
+            flip ? "md:order-1 md:items-end md:text-right" : "md:items-start"
+          }`}
+        >
+          <span className="font-body text-sm tracking-[0.2em] text-[var(--lime)]">
             Step {step.n}
           </span>
           <p className="mt-3 font-display text-[clamp(1.75rem,3.4vw,2.9rem)] leading-[1.05] tracking-[-0.02em]">

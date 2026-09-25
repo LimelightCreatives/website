@@ -84,6 +84,29 @@
    Base
 -------------------------------- */
 
+.lc-grid-paper {
+  --g: 25px;
+  --g-line: color-mix(in srgb, var(--lc-cream, var(--foreground)) 10%, transparent);
+
+  background-image:
+    linear-gradient(to right, var(--g-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--g-line) 1px, transparent 1px);
+  background-size: var(--g) var(--g);
+  background-position: 0 0, 0 0;
+}
+
+.lc-grid-paper-tan {
+  --g: 25px;
+  --g-line: rgba(32, 44, 68, 0.12);
+
+  background-color: #f2ecd8;
+  background-image:
+    linear-gradient(to right, var(--g-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--g-line) 1px, transparent 1px);
+  background-size: var(--g) var(--g);
+  background-position: 0 0, 0 0;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
