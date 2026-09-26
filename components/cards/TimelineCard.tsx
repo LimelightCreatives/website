@@ -229,34 +229,36 @@ function ScheduleRow({ slot }: { slot: Slot }) {
   const milestone = slot.kind === "milestone";
 
   return (
-    <li className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-t border-current/15 py-4 first:border-t-0">
+    <li className="flex flex-col gap-1 border-t border-current/15 py-4 first:border-t-0 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-4 sm:gap-y-1">
       <span
         className={`font-body text-sm tabular-nums ${
           milestone ? "text-[var(--lc-green-bright)]" : "text-[var(--lc-cream)]/55"
-        } w-[5.5rem] shrink-0`}
+        } sm:w-[5.5rem] sm:shrink-0`}
       >
         {slot.time}
       </span>
 
-      <span
-        className={`font-display text-xl leading-tight md:text-2xl ${
-          milestone ? "" : "text-[var(--lc-cream)]/85"
-        }`}
-      >
-        {slot.name}
-      </span>
-
-      {slot.tag ? (
+      <div className="flex items-baseline gap-x-4 sm:contents">
         <span
-          className={`ml-auto rounded-full px-3 py-1 font-body text-[0.7rem] tracking-[0.08em] ${
-            slot.tag === "Compulsory"
-              ? "bg-[var(--lc-green)] text-[var(--lc-cream)]"
-              : "border border-[var(--lc-mint)]/60 text-[var(--lc-mint)]"
+          className={`font-display text-xl leading-tight md:text-2xl ${
+            milestone ? "" : "text-[var(--lc-cream)]/85"
           }`}
         >
-          {slot.tag}
+          {slot.name}
         </span>
-      ) : null}
+
+        {slot.tag ? (
+          <span
+            className={`ml-auto rounded-full px-3 py-1 font-body text-[0.7rem] tracking-[0.08em] ${
+              slot.tag === "Compulsory"
+                ? "bg-[var(--lc-green)] text-[var(--lc-cream)]"
+                : "border border-[var(--lc-mint)]/60 text-[var(--lc-mint)]"
+            }`}
+          >
+            {slot.tag}
+          </span>
+        ) : null}
+      </div>
     </li>
   );
 }
