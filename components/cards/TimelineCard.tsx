@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScheduleList } from "../ScheduleList";
 
 /* ------------------------------------------------------------------ */
 /*  Content                                                            */
@@ -225,53 +226,9 @@ function StepRow({ step, index }: { step: Step; index: number }) {
 /*  Schedule                                                           */
 /* ------------------------------------------------------------------ */
 
-function ScheduleRow({ slot }: { slot: Slot }) {
-  const milestone = slot.kind === "milestone";
 
-  return (
-    <li className="flex flex-col gap-1 border-t border-current/15 py-4 first:border-t-0 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-4 sm:gap-y-1">
-      <span
-        className={`font-body text-sm tabular-nums ${
-          milestone ? "text-[var(--lc-green-bright)]" : "text-[var(--lc-cream)]/55"
-        } sm:w-[5.5rem] sm:shrink-0`}
-      >
-        {slot.time}
-      </span>
 
-      <div className="flex items-baseline gap-x-4 sm:contents">
-        <span
-          className={`font-display text-xl leading-tight md:text-2xl ${
-            milestone ? "" : "text-[var(--lc-cream)]/85"
-          }`}
-        >
-          {slot.name}
-        </span>
-
-        {slot.tag ? (
-          <span
-            className={`ml-auto rounded-full px-3 py-1 font-body text-[0.7rem] tracking-[0.08em] ${
-              slot.tag === "Compulsory"
-                ? "bg-[var(--lc-green)] text-[var(--lc-cream)]"
-                : "border border-[var(--lc-mint)]/60 text-[var(--lc-mint)]"
-            }`}
-          >
-            {slot.tag}
-          </span>
-        ) : null}
-      </div>
-    </li>
-  );
-}
-
-function Day({
-  label,
-  date,
-  slots,
-}: {
-  label: string;
-  date: string;
-  slots: Slot[];
-}) {
+function Day({ label, date, slots }: { label: string; date: string; slots: Slot[] }) {
   return (
     <section className="bg-[var(--lc-cream)]/[0.04] p-6 md:p-8">
       <header className="mb-2 flex items-baseline justify-between gap-4">
@@ -279,11 +236,7 @@ function Day({
         <span className="font-body text-sm text-[var(--lc-mint)]">{date}</span>
       </header>
 
-      <ul className="mt-6">
-        {slots.map((slot) => (
-          <ScheduleRow key={`${slot.time}-${slot.name}`} slot={slot} />
-        ))}
-      </ul>
+      <ScheduleList slots={slots} />
     </section>
   );
 }
