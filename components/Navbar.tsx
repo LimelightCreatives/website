@@ -9,7 +9,7 @@ import { Button } from "@/components/Button";
 const links = [
   { label: "ABOUT", href: "#about" },
   { label: "WHAT'S NEXT", href: "#timeline" },
-  // { label: "SPONSORS", href: "#sponsors" },
+  { label: "SPONSORS", href: "#sponsors" },
   { label: "FAQ", href: "#faq" },
   { label: "TEAM", href: "#team" },
 ];
