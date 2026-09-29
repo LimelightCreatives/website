@@ -57,7 +57,7 @@ function StickerFilter() {
 }
 
 const SIZES = {
-  featured: "w-64 text-3xl md:w-64 md:text-4xl",
+  featured: "w-128 text-3xl md:w-128 md:text-4xl",
   secondary: "w-14 text-xl md:w-16 md:text-2xl",
   tertiary: "w-10 text-base md:w-12 md:text-lg",
 } as const;
@@ -153,7 +153,7 @@ return (
 
 
           <div
-            className="mt-12 rounded-lg p-8 md:p-12"
+            className="mt-12 rounded-lg p-8 md:p-24"
             style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, var(--foreground) 0, transparent 1px)`,
               backgroundSize: "25px 25px",
