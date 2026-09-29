@@ -276,7 +276,7 @@ export function TimelineCard() {
           </h2>
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
-            This Spring holidays, Limelight Creatives is running our very first film-a-thon, 
+            This October, Limelight Creatives is running our very first film-a-thon, 
             good news: you’re invited! Over two days, you’ll learn how to write, shoot, 
             and edit your own short film. No experience needed, just bring your ideas and a 
             crew of new friends.
