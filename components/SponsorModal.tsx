@@ -58,13 +58,13 @@ export function SponsorModal({ onClose }: { onClose: () => void }) {
             className="mb-2 text-2xl font-display font-bold"
             style={{ color: "var(--foreground)" }}
           >
-            Interested in sponsoring?
+            Let&apos;s keep in touch!
           </h2>
           <p
             className="mb-6 text-sm"
             style={{ color: "var(--foreground)", opacity: 0.65 }}
           >
-            Reach out and we&rsquo;ll get back to you.
+            Reach out and we&rsquo;ll get back to you promptly.
           </p>
 
           <a
