@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/Button";
+import { scrollToCard } from "@/lib/scrollToCard";
 
 const links = [
   { label: "ABOUT", href: "#about" },
@@ -50,25 +51,9 @@ export default function Navbar() {
     };
   }, []);
 
-  const scrollToCard = (id: string) => {
-    const card = document.getElementById(id);
-
-    if (!card) return;
-
-    const previousPosition = card.style.position;
-
-    card.style.position = "static";
-
-    const targetTop =
-      card.getBoundingClientRect().top + window.scrollY;
-
-    // Restore the sticky positioning.
-    card.style.position = previousPosition;
-
-    window.scrollTo({
-      top: targetTop,
-      behavior: "smooth",
-    });
+  const handleNavClick = (id: string) => {
+    history.pushState(null, "", `#${id}`);
+    scrollToCard(id);
   };
 
   return (
@@ -99,17 +84,14 @@ export default function Navbar() {
                 <div key={link.href} className="flex items-center">
                   <button
                     type="button"
-                    onClick={() => scrollToCard(id)}
+                    onClick={() => handleNavClick(id)}
                     className="px-3 py-2 font-display text-sm font-bold tracking-[0.12em] transition-opacity hover:opacity-50"
                   >
                     {link.label}
                   </button>
 
                   {index < links.length - 1 && (
-                    <span
-                      aria-hidden="true"
-                      className="font-display text-sm"
-                    >
+                    <span aria-hidden="true" className="font-display text-sm">
                       /
                     </span>
                   )}

@@ -11,6 +11,8 @@ import { SponsorsCard } from "./cards/SponsorsCard";
 import { FAQCard } from "./cards/FAQCard";
 import { TeamCard } from "./cards/TeamCard";
 
+import { scrollToCard } from "@/lib/scrollToCard";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
@@ -30,7 +32,7 @@ export function ScrollCards() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(
-    () => {
+  () => {
       ScrollTrigger.config({
         ignoreMobileResize: true, // ignore address-bar-driven resize events on mobile
       });
@@ -48,6 +50,40 @@ export function ScrollCards() {
             invalidateOnRefresh: true,
           });
         });
+
+      // --- Hash / anchor navigation ---
+
+      const goToHash = (behavior: ScrollBehavior) => {
+        const id = window.location.hash.slice(1);
+        if (id) scrollToCard(id, behavior);
+      };
+
+      // Initial load: wait until ScrollTrigger has finished measuring.
+      ScrollTrigger.refresh();
+      requestAnimationFrame(() => goToHash("instant"));
+
+      // Any in-page anchor click (including Button href="#apply" etc.)
+      const onClick = (e: MouseEvent) => {
+        const a = (e.target as HTMLElement).closest<HTMLAnchorElement>(
+          'a[href^="#"]'
+        );
+        if (!a) return;
+        const id = a.getAttribute("href")!.slice(1);
+        if (!document.getElementById(id)) return;
+        e.preventDefault();
+        history.pushState(null, "", `#${id}`);
+        scrollToCard(id);
+      };
+
+      const onHashChange = () => goToHash("smooth");
+
+      document.addEventListener("click", onClick);
+      window.addEventListener("hashchange", onHashChange);
+
+      return () => {
+        document.removeEventListener("click", onClick);
+        window.removeEventListener("hashchange", onHashChange);
+      };
     },
     { scope: sectionRef, dependencies: [] }
   );
@@ -55,7 +91,7 @@ export function ScrollCards() {
   return (
     <section ref={sectionRef}>
       {cards.map((card, index) => (
-        <div key={card.id}>
+        <div key={card.id} data-card-wrapper>
           <div
             id={card.id}
             ref={(el) => {
