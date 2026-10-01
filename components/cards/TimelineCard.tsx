@@ -282,7 +282,7 @@ export function TimelineCard() {
       {/*  Hero                                                       */}
       {/* ---------------------------------------------------------- */}
       <div className="relative flex min-h-[100svh] flex-col justify-between px-6 py-12 md:px-16 md:py-16">
-        <div className="font-body text-sm uppercase tracking-[0.15em]">
+        <div className="mb-6 font-body text-sm uppercase tracking-[0.15em] md:mb-16 lg:mb-28">
           WHAT&apos;S NEXT
         </div>
 
