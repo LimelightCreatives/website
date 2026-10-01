@@ -11,6 +11,24 @@ const KEY_DATES = [
   { date: "October 24–25", label: "EVENT OPENING DAY!" },
 ];
 
+const LOCATION = {
+  venue: "La Trobe University Sydney",
+  address: "255 Elizabeth St, Sydney NSW 2000",
+};
+
+function Pin({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={`pointer-events-none ${className}`}
+      fill="currentColor"
+    >
+      <path d="M12 0C7.6 0 4 3.6 4 8c0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
+    </svg>
+  );
+}
+
 type Step = {
   n: string;
   title: React.ReactNode;
@@ -274,6 +292,19 @@ export function TimelineCard() {
             <br />
             <span className="font-bold">Limelight GENESIS</span>
           </h2>
+
+          {/* Location */}
+          <div className="mt-8 flex items-start gap-3 text-[var(--lc-mint)] lg:gap-4">
+            <Pin className="mt-1 h-6 w-6 shrink-0 md:h-8 md:w-8 lg:mt-2 lg:h-12 lg:w-12 xl:h-14 xl:w-14" />
+            <div>
+              <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] leading-tight text-[var(--background)]">
+                {LOCATION.venue}
+              </p>
+              <p className="font-body text-sm uppercase tracking-[0.15em]">
+                {LOCATION.address}
+              </p>
+            </div>
+          </div>
 
           <p className="mt-10 max-w-xl font-body text-lg leading-relaxed md:text-xl">
             This October, Limelight Creatives is running our very first film-a-thon, 

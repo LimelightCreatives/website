@@ -260,7 +260,7 @@ export function Hero() {
       <div className="mx-auto mt-8 relative z-10 flex min-h-dvh max-w-7xl flex-col items-center justify-center px-6 text-center pointer-events-none">
         <a
           href="#timeline"
-          className="pointer-events-auto mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-sm font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
+          className="pointer-events-auto mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-md font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
         >
           Launching Limelight GENESIS, Oct 24-25 @ La Trobe University Sydney
           Campus!
