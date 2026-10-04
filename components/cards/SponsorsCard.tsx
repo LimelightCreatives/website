@@ -57,7 +57,7 @@ function StickerFilter() {
 }
 
 const SIZES = {
-  featured: "w-128 text-3xl md:w-128 md:text-4xl",
+  featured: "w-76 max-w-full text-3xl sm:w-72 md:w-128 md:text-4xl",
   secondary: "w-14 text-xl md:w-16 md:text-2xl",
   tertiary: "w-10 text-base md:w-12 md:text-lg",
 } as const;
