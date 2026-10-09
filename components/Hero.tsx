@@ -296,7 +296,7 @@ export function Hero() {
         </p>
 
         <div className="pointer-events-auto mt-8 flex gap-4 text-lg">
-          <Button href="#apply">REGISTER INTEREST {">"}</Button>
+          <Button href="#apply">REGISTER FOR GENESIS {">"}</Button>
           <Button href="#timeline" variant="secondary">
             WHAT&apos;S NEXT
           </Button>
