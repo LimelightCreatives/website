@@ -57,9 +57,9 @@ function StickerFilter() {
 }
 
 const SIZES = {
-  featured: "w-76 max-w-full text-3xl sm:w-72 md:w-128 md:text-4xl",
-  secondary: "w-14 text-xl md:w-16 md:text-2xl",
-  tertiary: "w-10 text-base md:w-12 md:text-lg",
+  featured: "w-76 h-32 max-w-full text-3xl sm:w-72 md:w-128 md:h-48 md:text-4xl",
+  secondary: "w-64 h-28 max-w-full text-3xl sm:w-72 md:w-96 md:h-40 md:text-4xl",
+  tertiary: "w-10 h-10 text-base md:w-12 md:h-12 md:text-lg",
 } as const;
 
 // Slight tilts so the stickers feel hand-placed
@@ -83,11 +83,11 @@ function Sticker({
         className={`flex items-center justify-center [filter:url(#sticker)] ${SIZES[size]}`}
       >
         {sponsor.logoSrc ? (
-          <a href={sponsor.link} className="block h-full">
+          <a href={sponsor.link} className="block h-full w-full">
             <img
               src={sponsor.logoSrc}
               alt={sponsor.name}
-              className="h-auto w-full object-contain"
+              className="h-full max-h-[inherit] w-full object-contain"
               draggable={false}
             />
           </a>
@@ -107,8 +107,9 @@ export function SponsorsCard() {
   const rows: { size: keyof typeof SIZES; sponsors: Sponsor[] }[] = [
     { size: "featured", 
       sponsors: [
-        // { name: "screenrights", logoSrc: "assets/sponsors/screenrights.svg" }
         { name: "La Trobe University", logoSrc: "assets/sponsors/latrobe.png", link: "https://www.latrobe.edu.au/" },
+        { name: "McAvoy Media", logoSrc: "assets/sponsors/mcavoy.png", link: "https://www.mcavoymedia.com.au/" },
+        { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
         { name: "Nanoblock", logoSrc: "assets/sponsors/nanoblock.png", link: "https://nanoblock.com.au/" },
       ] 
     },
