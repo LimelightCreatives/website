@@ -57,7 +57,7 @@ function StickerFilter() {
 }
 
 const SIZES = {
-  featured: "w-76 h-32 max-w-full text-3xl sm:w-72 md:w-128 md:h-48 md:text-4xl",
+  featured: "w-48 h-20 max-w-full text-2xl sm:w-52 md:w-64 md:h-28 md:text-3xl",
   secondary: "w-64 h-28 max-w-full text-3xl sm:w-72 md:w-96 md:h-40 md:text-4xl",
   tertiary: "w-10 h-10 text-base md:w-12 md:h-12 md:text-lg",
 } as const;
@@ -105,11 +105,12 @@ function Sticker({
 export function SponsorsCard() {
   const [showSponsorModal, setShowSponsorModal] = useState(false);
   const rows: { size: keyof typeof SIZES; sponsors: Sponsor[] }[] = [
-    { size: "featured", 
+    { size: "secondary", 
       sponsors: [
         { name: "La Trobe University", logoSrc: "assets/sponsors/latrobe.png", link: "https://www.latrobe.edu.au/" },
         { name: "McAvoy Media", logoSrc: "assets/sponsors/mcavoy.png", link: "https://www.mcavoymedia.com.au/" },
         { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
+        { name: "PYT Fairfield", logoSrc: "assets/sponsors/pytfairfield.png", link: "https://pyt.com.au/" },
         { name: "Nanoblock", logoSrc: "assets/sponsors/nanoblock.png", link: "https://nanoblock.com.au/" },
       ] 
     },
@@ -164,7 +165,7 @@ return (
               {rows.map((row, r) => (
                 <div
                   key={r}
-                  className="flex flex-wrap items-center justify-center gap-x-6 gap-y-16 md:gap-x-10"
+                  className="flex flex-wrap items-center justify-center gap-x-3 gap-y-6 md:gap-x-3"
                 >
                   {row.sponsors.map((sponsor, i) => (
                     <Sticker
