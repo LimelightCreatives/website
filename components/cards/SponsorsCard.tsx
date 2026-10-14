@@ -110,8 +110,9 @@ export function SponsorsCard() {
         { name: "La Trobe University", logoSrc: "assets/sponsors/latrobe.png", link: "https://www.latrobe.edu.au/" },
         { name: "McAvoy Media", logoSrc: "assets/sponsors/mcavoy.png", link: "https://www.mcavoymedia.com.au/" },
         { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
-        { name: "PYT Fairfield", logoSrc: "assets/sponsors/pytfairfield.png", link: "https://pyt.com.au/" },
+        { name: "SAE University College", logoSrc: "assets/sponsors/sae.png", link: "https://sae.edu.au/" },
         { name: "Nanoblock", logoSrc: "assets/sponsors/nanoblock.png", link: "https://nanoblock.com.au/" },
+        { name: "PYT Fairfield", logoSrc: "assets/sponsors/pytfairfield.png", link: "https://pyt.com.au/" },
       ] 
     },
     // { 
