@@ -73,8 +73,17 @@ export function Footer() {
             >
               <SiTiktok size={30} />
             </Link>
-            
           </div>
+        </div>
+
+        {/* Acknowledgement of Country */}
+        <div className="border-t border-[var(--border)] py-6">
+          <p className="mt-3 max-w-3xl font-body text-sm leading-relaxed">
+            Limelight Creatives acknowledges the Gadigal people of the Eora
+            Nation, the Traditional Custodians of the land on which we work and
+            create. We pay our respects to Elders past and present, and to all
+            Aboriginal and Torres Strait Islander people who join us.
+          </p>
         </div>
       </div>
     </footer>
