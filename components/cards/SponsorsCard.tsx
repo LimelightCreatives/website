@@ -108,6 +108,7 @@ export function SponsorsCard() {
     { size: "secondary", 
       sponsors: [
         { name: "La Trobe University", logoSrc: "assets/sponsors/latrobe.png", link: "https://www.latrobe.edu.au/" },
+        { name: "Golden Age Cinema", logoSrc: "assets/sponsors/goldenage.png", link: "https://www.ourgoldenage.com.au/" },
         { name: "McAvoy Media", logoSrc: "assets/sponsors/mcavoy.png", link: "https://www.mcavoymedia.com.au/" },
         { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
         { name: "SAE University College", logoSrc: "assets/sponsors/sae.png", link: "https://sae.edu.au/" },
