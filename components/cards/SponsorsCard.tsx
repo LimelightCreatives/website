@@ -112,6 +112,7 @@ export function SponsorsCard() {
         { name: "McAvoy Media", logoSrc: "assets/sponsors/mcavoy.png", link: "https://www.mcavoymedia.com.au/" },
         { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
         { name: "SAE University College", logoSrc: "assets/sponsors/sae.png", link: "https://sae.edu.au/" },
+        { name: "National Institute of Dynamic Art", logoSrc: "assets/sponsors/nida.png", link: "https://www.nida.edu.au/" },
         { name: "Nanoblock", logoSrc: "assets/sponsors/nanoblock.png", link: "https://nanoblock.com.au/" },
         { name: "PYT Fairfield", logoSrc: "assets/sponsors/pytfairfield.png", link: "https://pyt.com.au/" },
       ] 
