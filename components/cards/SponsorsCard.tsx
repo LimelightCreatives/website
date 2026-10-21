@@ -113,6 +113,7 @@ export function SponsorsCard() {
         { name: "Karmic Artworks", logoSrc: "assets/sponsors/karmic.png", link: "https://karmicartworks.com.au/" },
         { name: "SAE University College", logoSrc: "assets/sponsors/sae.png", link: "https://sae.edu.au/" },
         { name: "National Institute of Dynamic Art", logoSrc: "assets/sponsors/nida.png", link: "https://www.nida.edu.au/" },
+        { name: "Made in the West Film Festival", logoSrc: "assets/sponsors/madeinthewest.png", link: "https://www.madeinthewest.com.au/" },
         { name: "Nanoblock", logoSrc: "assets/sponsors/nanoblock.png", link: "https://nanoblock.com.au/" },
         { name: "PYT Fairfield", logoSrc: "assets/sponsors/pytfairfield.png", link: "https://pyt.com.au/" },
       ] 
