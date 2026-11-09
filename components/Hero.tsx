@@ -296,7 +296,7 @@ export function Hero() {
 
         <div className="pointer-events-auto mt-8 flex gap-4 text-lg">
           <Button href="#timeline">WATCH THE FILMS {">"}</Button>
-          <Button href="#apply" variant="secondary">
+          <Button href="#upcoming" variant="secondary">
             UPCOMING EVENTS {">"}
           </Button>
         </div>

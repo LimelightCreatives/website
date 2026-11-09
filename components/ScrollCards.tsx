@@ -9,6 +9,7 @@ import { AboutCard } from "./cards/AboutCard";
 import { TimelineCard } from "./cards/RecapCard";
 import { SponsorsCard } from "./cards/SponsorsCard";
 import { FAQCard } from "./cards/FAQCard";
+import { UpcomingCard } from "./cards/UpcomingCard";
 import { TeamCard } from "./cards/TeamCard";
 
 import { scrollToCard } from "@/lib/scrollToCard";
@@ -20,7 +21,8 @@ const cards = [
   { id: "timeline", number: "02", content: <TimelineCard /> },
   { id: "sponsors", number: "03", content: <SponsorsCard /> },
   { id: "faq", number: "04", content: <FAQCard /> },
-  { id: "team", number: "05", content: <TeamCard /> },
+  { id: "upcoming", number: "05", content: <UpcomingCard /> },
+  { id: "team", number: "06", content: <TeamCard /> },
 ];
 
 // how much extra scroll distance a card gets to sit fully visible

@@ -12,6 +12,7 @@ const links = [
   { label: "GENESIS", href: "#timeline" },
   { label: "SPONSORS", href: "#sponsors" },
   { label: "FAQ", href: "#faq" },
+  { label: "UPCOMING", href: "#upcoming" },
   { label: "TEAM", href: "#team" },
 ];
 
