@@ -154,7 +154,7 @@ return (
               setShowSponsorModal(true);
             }}
           >
-            Thank you to our partners for supporting our mission. <u>Interested in sponsoring?</u>
+            Thank you to the partners who made Limelight GENESIS possible. <u>Interested in sponsoring?</u>
           </a>
 
 

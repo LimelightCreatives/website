@@ -262,8 +262,7 @@ export function Hero() {
           href="#timeline"
           className="pointer-events-auto mb-8 inline-flex items-center gap-2 rounded-full  px-5 py-2 text-md font-body font-semibold backdrop-blur-sm transition hover:bg-white/10"
         >
-          Launching Limelight GENESIS, Oct 24-25 @ La Trobe University Sydney
-          Campus!
+          Limelight GENESIS wrapped, Oct 24-25. See the recap
           <span aria-hidden="true">&gt;</span>
         </a>
 
@@ -291,14 +290,14 @@ export function Hero() {
           <SparkleSmall className="pointer-events-none absolute hidden -bottom-20 -left-16 h-16 w-16 md:block" />
         </div>
 
-        <p className="mt-10 max-w-xl text-xl font-body font-bold">
-          Limelight Creatives run free film-a-thons for high schoolers.
+        <p className="mt-14 max-w-xl text-xl font-body">
+          Limelight Creatives runs free film-a-thons for high schoolers.
         </p>
 
         <div className="pointer-events-auto mt-8 flex gap-4 text-lg">
-          <Button href="#apply">REGISTER FOR GENESIS {">"}</Button>
-          <Button href="#timeline" variant="secondary">
-            WHAT&apos;S NEXT
+          <Button href="#timeline">WATCH THE FILMS {">"}</Button>
+          <Button href="#apply" variant="secondary">
+            UPCOMING EVENTS {">"}
           </Button>
         </div>
 

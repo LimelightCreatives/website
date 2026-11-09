@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="relative overflow-hidden px-6 pb-6 pt-24 md:pt-32">
       {/* Footer details */}
       <div className="mx-auto max-w-7xl">
-        <div className="border-t-2 border-[var(--border)]" />
+        <div className="border-t border-[var(--border)]" />
 
         <div className="flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-1">

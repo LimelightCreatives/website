@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { AboutCard } from "./cards/AboutCard";
-import { TimelineCard } from "./cards/TimelineCard";
+import { TimelineCard } from "./cards/RecapCard";
 import { SponsorsCard } from "./cards/SponsorsCard";
 import { FAQCard } from "./cards/FAQCard";
 import { TeamCard } from "./cards/TeamCard";

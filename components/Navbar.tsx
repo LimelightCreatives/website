@@ -9,7 +9,7 @@ import { scrollToCard } from "@/lib/scrollToCard";
 
 const links = [
   { label: "ABOUT", href: "#about" },
-  { label: "WHAT'S NEXT", href: "#timeline" },
+  { label: "GENESIS", href: "#timeline" },
   { label: "SPONSORS", href: "#sponsors" },
   { label: "FAQ", href: "#faq" },
   { label: "TEAM", href: "#team" },
@@ -67,7 +67,7 @@ export default function Navbar() {
         <a href="/" aria-label="Go to home">
           <Image
             src="/branding/logo.svg"
-            alt="Story Labs"
+            alt="Limelight Creatives"
             width={64}
             height={64}
             priority
@@ -102,7 +102,7 @@ export default function Navbar() {
         )}
 
         <Button href="#apply" variant="secondary">
-          REGISTER {">"}
+          JOIN THE TEAM {">"}
         </Button>
       </nav>
     </header>
