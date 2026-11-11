@@ -4,6 +4,7 @@ import { FilloutProvider } from "@/components/FilloutProvider";
 // import { ThemeProvider } from "@/components/ThemeProvider";
 import localFont from "next/font/local";
 import "./globals.css";
+import { HideOnRoutes } from "@/components/HideOnRoute";
 import { Footer } from "@/components/Footer";
 
 const wordmark = localFont({
@@ -66,9 +67,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <FilloutProvider>
-          <Navbar />
+          <HideOnRoutes routes={["/encore"]}>
+            <Navbar />
+          </HideOnRoutes>
 
           {children}
+
           <Footer />
         </FilloutProvider>
       </body>
