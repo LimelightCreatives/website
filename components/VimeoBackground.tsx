@@ -64,13 +64,13 @@ export function VimeoBackground({ src, title, poster }: Props) {
         }`}
         style={poster ? { backgroundImage: `url(${poster})` } : undefined}
       >
-        {/* <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white/80 motion-reduce:animate-none" /> */}
-        <Image
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white/80 motion-reduce:animate-none" />
+        {/* <Image
             src="/branding/wordmark-dark.svg"
             alt=""
             width={465/2}
             height={240/2}
-        />
+        /> */}
       </div>
     </div>
   );
