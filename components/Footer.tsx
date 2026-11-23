@@ -16,7 +16,7 @@ export function Footer() {
           <div className="flex flex-col gap-1">
             <Image
               src="../branding/wordmark.svg"
-              alt="Limelight Creatives"
+              alt="Lumenite Creatives"
               height={64}
               width={256}
             />
@@ -79,7 +79,7 @@ export function Footer() {
         {/* Acknowledgement of Country */}
         <div className="border-t border-[var(--border)] py-6">
           <p className="mt-3 max-w-3xl font-body text-sm leading-relaxed">
-            Limelight Creatives acknowledges the Gadigal people of the Eora
+            Lumenite Creatives acknowledges the Gadigal people of the Eora
             Nation, the Traditional Custodians of the land on which we work and
             create. We pay our respects to Elders past and present, and to all
             Aboriginal and Torres Strait Islander people who join us.

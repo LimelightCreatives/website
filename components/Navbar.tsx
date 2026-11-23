@@ -68,7 +68,7 @@ export default function Navbar() {
         <a href="/" aria-label="Go to home">
           <Image
             src="/branding/logo.svg"
-            alt="Limelight Creatives"
+            alt="Lumenite Creatives"
             width={64}
             height={64}
             priority

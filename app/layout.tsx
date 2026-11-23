@@ -53,8 +53,8 @@ const body = localFont({
 // });
 
 export const metadata: Metadata = {
-  title: "Limelight Creatives - Teen Filmmaking Event in Sydney",
-  description: "Limelight Creatives runs free film-a-thons for high schoolers; no experience needed!",
+  title: "Lumenite Creatives - Teen Filmmaking Event in Sydney",
+  description: "Lumenite Creatives runs free film-a-thons for high schoolers; no experience needed!",
 };
 
 export default function RootLayout({
