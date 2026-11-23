@@ -7,26 +7,26 @@ lastUpdated: "27 September 2026"
 
 ## In summary
 
-- Limelight Creatives takes a Duty-of-Care approach.
-- All parties affiliated with Limelight Creatives must display safe, respectful, and non-discriminatory behaviour on all event platforms.
+- Lumenite Creatives takes a Duty-of-Care approach.
+- All parties affiliated with Lumenite Creatives must display safe, respectful, and non-discriminatory behaviour on all event platforms.
 - This policy is overseen and enforced by our elected Safeguarding Officers, who act as a point of contact in the case of policy breaches.
 
 ## Definitions
 
-For the purpose of clarification within Limelight's Safeguarding Policy, the following definitions apply:
+For the purpose of clarification within Lumenite's Safeguarding Policy, the following definitions apply:
 
 - **Participant**: Any person between the ages of 13–18 inclusive who either attends an event or consumes event resources.
-- **Limelight**: The organisation Limelight Creatives, to which this policy belongs.
-- **Associated Parties**: Any party who is involved with Limelight Creatives, including but not limited to the founding team, staff, sponsors, mentors, volunteers, participants, and parents (see [Scope of policy](#scope-of-policy)).
-- **Confidentiality**: The responsibility of Limelight Creatives to handle personal and safeguarding information carefully and not share it unnecessarily.
-- **Duty of Care**: The overarching responsibility of Limelight Creatives to take reasonable steps to identify foreseeable risks and to prioritise the protection, safety, and wellbeing of people participating.
-- **Mentor / Volunteer**: An individual invited by Limelight Creatives to provide assistance, education, or support to participants. This party does not need to be under 18 to be invited.
+- **Lumenite**: The organisation Lumenite Creatives, to which this policy belongs.
+- **Associated Parties**: Any party who is involved with Lumenite Creatives, including but not limited to the founding team, staff, sponsors, mentors, volunteers, participants, and parents (see [Scope of policy](#scope-of-policy)).
+- **Confidentiality**: The responsibility of Lumenite Creatives to handle personal and safeguarding information carefully and not share it unnecessarily.
+- **Duty of Care**: The overarching responsibility of Lumenite Creatives to take reasonable steps to identify foreseeable risks and to prioritise the protection, safety, and wellbeing of people participating.
+- **Mentor / Volunteer**: An individual invited by Lumenite Creatives to provide assistance, education, or support to participants. This party does not need to be under 18 to be invited.
 - **Safeguarding Officer**: The individual responsible for handling concerns and overseeing this policy in its entirety (see [Responsibilities](#responsibilities)).
 - **WWCC**: "Working With Children Check", a legal screening that approves suitability to engage in child-related work (see [Responsibilities](#responsibilities)).
 
 ## Scope of policy
 
-This policy applies to anyone involved with Limelight events internally in Sydney, nationally, and globally, including:
+This policy applies to anyone involved with Lumenite events internally in Sydney, nationally, and globally, including:
 
 - Participants aged 13–18
 - Parents and guardians of participants
@@ -37,20 +37,20 @@ This policy applies to anyone involved with Limelight events internally in Sydne
 It covers all event locations, including:
 
 - Film-a-thon venues
-- Online activity connected to Limelight, including Discord, Slack, group chats, shared drives, and video calls
+- Online activity connected to Lumenite, including Discord, Slack, group chats, shared drives, and video calls
 - Event-related activities, including pre-event activity, the 24-hour or 12-hour event, and post-event activity
 
 ## Purpose
 
 ### 3.1 Abstract
 
-Limelight is a youth-led creative organisation founded by teenagers, for teenagers. Our mission is to empower young teen filmmakers by spreading the art of storytelling.
+Lumenite is a youth-led creative organisation founded by teenagers, for teenagers. Our mission is to empower young teen filmmakers by spreading the art of storytelling.
 
 ### 3.2 Overview
 
-This Safeguarding Policy aims to ensure that all participants, founders, volunteers, and mentors at Limelight are safe, respected, and supported. It reflects the expectations set in the Limelight Code of Conduct.
+This Safeguarding Policy aims to ensure that all participants, founders, volunteers, and mentors at Lumenite are safe, respected, and supported. It reflects the expectations set in the Lumenite Code of Conduct.
 
-### 3.3 Why safety matters at Limelight
+### 3.3 Why safety matters at Lumenite
 
 We take a duty-of-care approach: we actively design our events, our screening process, and our culture to reduce the chance of harm happening in the first place.
 
@@ -61,11 +61,11 @@ We aim to mitigate and identify risks before harm occurs by:
 - Responding seriously to concerns
 - Setting clear behavioural expectations
 
-Safeguarding, although ultimately Limelight Creatives' responsibility, holds a universal weight on every associated party. Every person involved with Limelight has a vital role in maintaining a safe environment.
+Safeguarding, although ultimately Lumenite Creatives' responsibility, holds a universal weight on every associated party. Every person involved with Lumenite has a vital role in maintaining a safe environment.
 
 ## Policy
 
-- Everyone must adhere to the Limelight Code of Conduct.
+- Everyone must adhere to the Lumenite Code of Conduct.
 - Everyone must be treated with respect and equality regardless of background, gender, or personal characteristics.
 - All disputes should be reported through an evaluation of their severity and frequency.
 - Everyone must follow instructions from founders, officers, staff, volunteers, and mentors regarding equipment handling, venue rules, and safety protocols.
@@ -90,7 +90,7 @@ The event venue will be staffed at all hours of the event, both inside and outsi
 
 Any time spent outside the venue must be explicitly consented to by a parent or guardian beforehand and will be supervised by a team of staff at a designated time.
 
-If parental consent has been given for a participant to film scenes off-site, Limelight still maintains its overarching Duty of Care. To mitigate foreseeable risks, off-site participation is strictly managed through the collection of parental consent, roll call systems, geographic boundaries, organiser supervision, and set procedures in case of emergencies.
+If parental consent has been given for a participant to film scenes off-site, Lumenite still maintains its overarching Duty of Care. To mitigate foreseeable risks, off-site participation is strictly managed through the collection of parental consent, roll call systems, geographic boundaries, organiser supervision, and set procedures in case of emergencies.
 
 Teams may leave the supervised premises with explicit consent (as an alternative to waiver consent), but may not have a staff member directly supervising them. A parent will be made aware of all associated risks through a phone call before this consent is given.
 
@@ -98,7 +98,7 @@ Teams may leave the supervised premises with explicit consent (as an alternative
 
 ### 6.1 Founders
 
-Founders must model the behaviour expected of participants and uphold the values of Limelight at all times.
+Founders must model the behaviour expected of participants and uphold the values of Lumenite at all times.
 
 Founders are expected to both adhere to and enforce this policy as implemented by Safeguarding Officers.
 
@@ -117,7 +117,7 @@ Safeguarding Officers will be clearly identified to participants where reasonabl
 
 ### 6.3 Volunteers / Mentors
 
-- Appointed individuals must model the behaviour expected of participants and uphold the values of Limelight at all times.
+- Appointed individuals must model the behaviour expected of participants and uphold the values of Lumenite at all times.
 - Any non-teen volunteer or mentor requires WWCC legal approval for their role.
 - They must report any concern, disclosure, or breach of this policy to the Safeguarding Officer immediately, and must never investigate it themselves.
 
@@ -130,7 +130,7 @@ Participants must be fully aware of the consequences that may follow a violation
 - A warning
 - Removal from the event
 - Contacting parents or guardians
-- Suspension from future Limelight events
+- Suspension from future Lumenite events
 - Referral to relevant authorities or services
 
 Consequences will aim to be fair and proportional to the circumstances.
@@ -139,7 +139,7 @@ Consequences will aim to be fair and proportional to the circumstances.
 
 Parents and guardians must provide either online or written consent for participation, emergency contact details, media consent, and must communicate any relevant medical or support needs on behalf of participants who are legal minors.
 
-Parents and guardians, as the consenting party, take full liability if a minor breaches the Code of Conduct, this policy, or damages equipment. This liability will be decided at the discretion of Limelight Creatives or an Associated Party.
+Parents and guardians, as the consenting party, take full liability if a minor breaches the Code of Conduct, this policy, or damages equipment. This liability will be decided at the discretion of Lumenite Creatives or an Associated Party.
 
 ## Risk management
 
@@ -183,7 +183,7 @@ For mentors, volunteers, or any other staff, the information we collect includes
 - Any relevant medical or access needs, including allergies or medications
 - Any relevant certifications
 
-This information is stored in a restricted-access system and never in a publicly accessible system. Only authorised Limelight Creatives staff can access this information, and they may only use it for purposes necessary for the event and/or the participant's attendance.
+This information is stored in a restricted-access system and never in a publicly accessible system. Only authorised Lumenite Creatives staff can access this information, and they may only use it for purposes necessary for the event and/or the participant's attendance.
 
 Data will be deleted when necessary. More information about data collection, storage, and deletion can be found in our Privacy Policy.
 
@@ -201,20 +201,20 @@ Data will be deleted when necessary. More information about data collection, sto
 
 If a minor is in immediate physical danger, standard procedure is to call emergency services first, then inform parents once it is safe to do so.
 
-Concerns can be reported through Limelight's [Incident Severity Guide](https://docs.google.com/document/d/1NmLRmGygQqmG6ZnJ7AQ7_Q-vLUxzWjGPHSoX3hym9v0/edit?usp=sharing).
+Concerns can be reported through Lumenite's [Incident Severity Guide](https://docs.google.com/document/d/1NmLRmGygQqmG6ZnJ7AQ7_Q-vLUxzWjGPHSoX3hym9v0/edit?usp=sharing).
 
 ## Medical emergency
 
-- Limelight will identify appropriate first-aid resources and personnel before each event.
+- Lumenite will identify appropriate first-aid resources and personnel before each event.
 - The location of first-aid equipment will be communicated to relevant volunteers and founders.
 - Participants should notify a staff member, volunteer, or Safeguarding Officer if they become unwell or are injured.
-- Limelight aims, wherever reasonably possible, to have a person with appropriate first-aid qualifications on the campus of the event.
+- Lumenite aims, wherever reasonably possible, to have a person with appropriate first-aid qualifications on the campus of the event.
 
 ## Participant welfare
 
 ### 9.1 Reporting concerns
 
-At the end of every Limelight event, there will be a form created solely for feedback and reporting concerns about our future events.
+At the end of every Lumenite event, there will be a form created solely for feedback and reporting concerns about our future events.
 
 Concerns should always be reported to Safeguarding Officers at any time during the event.
 
@@ -222,7 +222,7 @@ This form will include rating and scoring our event.
 
 ### 9.2 Confidentiality
 
-Limelight will handle safeguarding information sensitively and confidentially.
+Lumenite will handle safeguarding information sensitively and confidentially.
 
 Information will only be shared with individuals who have a legitimate need to know, or where disclosure is necessary to protect someone's safety, obtain appropriate assistance, or comply with a legal obligation.
 
@@ -239,14 +239,14 @@ The debrief will provide organisers and relevant staff with an opportunity to re
 
 ### 9.4 Consent from parents / guardians
 
-For participants, Limelight will obtain appropriate parent or guardian consent before participation where required, including for:
+For participants, Lumenite will obtain appropriate parent or guardian consent before participation where required, including for:
 
 - Permission to participate in the event
 - Emergency contact information
 - Relevant medical, accessibility, or support information
 - Appropriate media or photography consent, where applicable
 
-Parents or guardians should provide Limelight with updated information as soon as possible.
+Parents or guardians should provide Lumenite with updated information as soon as possible.
 
 The parent's guide can be found [here](/policies/Limelight Genesis Parents Guide.pdf).
 

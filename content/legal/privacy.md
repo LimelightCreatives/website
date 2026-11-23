@@ -7,21 +7,21 @@ lastUpdated: "31 August 2026"
 
 ## In summary
 
-We believe in collecting as little data as possible, and only what is needed to run Limelight Creatives' programs, services, and events.
+We believe in collecting as little data as possible, and only what is needed to run Lumenite Creatives' programs, services, and events.
 
 We do not, and never will, sell your personal information.
 
 Code used in our events or online is 100% open-source for transparency and is available on [GitHub](https://github.com/LimelightCreatives).
 
-You may decline to share certain information with Limelight Creatives. That is completely fine. You can still use any of our services that do not require that information.
+You may decline to share certain information with Lumenite Creatives. That is completely fine. You can still use any of our services that do not require that information.
 
 ## Who we are
 
-Limelight Creatives ("we", "us", or "our") is committed to protecting the personal information you share with us through our services, including our websites, applications, programs, and events.
+Lumenite Creatives ("we", "us", or "our") is committed to protecting the personal information you share with us through our services, including our websites, applications, programs, and events.
 
-This Privacy Policy applies to products and services provided by Limelight Creatives through [limelightcreatives.org](https://limelightcreatives.org/), sites operated under Limelight Creatives or its affiliates, applications, services, and events operated by Limelight Creatives.
+This Privacy Policy applies to products and services provided by Lumenite Creatives through [lumenitecreatives.org](https://lumenitecreatives.org/), sites operated under Lumenite Creatives or its affiliates, applications, services, and events operated by Lumenite Creatives.
 
-Limelight Creatives currently operates exclusively in Australia and complies with the Office of the Australian Information Commissioner (OAIC) and the Australian Privacy Principles (APPs). As we expand our offerings globally, we may revise portions of this Privacy Policy to comply with applicable laws and standards in other jurisdictions.
+Lumenite Creatives currently operates exclusively in Australia and complies with the Office of the Australian Information Commissioner (OAIC) and the Australian Privacy Principles (APPs). As we expand our offerings globally, we may revise portions of this Privacy Policy to comply with applicable laws and standards in other jurisdictions.
 
 ## What is personal information?
 
@@ -29,7 +29,7 @@ Personal information is information or an opinion that identifies an individual.
 
 ## Information we collect
 
-You may share personal information with us when using Limelight Creatives' services. This may happen when setting up an account, registering for a program, making a donation, or taking part in activities that are public or intended to be public in nature, such as sharing a project or participating in a community discussion.
+You may share personal information with us when using Lumenite Creatives' services. This may happen when setting up an account, registering for a program, making a donation, or taking part in activities that are public or intended to be public in nature, such as sharing a project or participating in a community discussion.
 
 Depending on how you interact with us, the information you provide may include your name, email address, home address, phone number, date of birth, and parent or guardian contact details.
 
@@ -39,13 +39,13 @@ Depending on how you interact with us, the information you provide may include y
 
 **Information collected automatically.** When you use our website or open our emails, we may automatically collect limited technical information, such as your IP address, device information, and browser type.
 
-**In-person events.** Limelight Creatives events may be photographed, recorded, or streamed by us. These materials may be used in marketing and promotional materials, including on social media or in print media.
+**In-person events.** Lumenite Creatives events may be photographed, recorded, or streamed by us. These materials may be used in marketing and promotional materials, including on social media or in print media.
 
 ## How we use your information
 
 **Running our programs.** We use information to operate, maintain, and improve our services and programs.
 
-**Communicating with you.** We may use your contact details to communicate with you about programs, events, updates, news, and other information relating to Limelight Creatives.
+**Communicating with you.** We may use your contact details to communicate with you about programs, events, updates, news, and other information relating to Lumenite Creatives.
 
 **Meeting legal requirements.** Some information may be necessary for us to comply with Australian law or respond to a court order or other lawful government request.
 
@@ -59,7 +59,7 @@ We may also disclose information where necessary to protect the security and int
 
 ## Third-party websites and services
 
-Services operated by Limelight Creatives may link to third-party websites or services. The privacy practices of those third parties are not governed by this Privacy Policy. We encourage you to review the privacy policies of third-party websites and services you use to understand how they collect, use, and handle information.
+Services operated by Lumenite Creatives may link to third-party websites or services. The privacy practices of those third parties are not governed by this Privacy Policy. We encourage you to review the privacy policies of third-party websites and services you use to understand how they collect, use, and handle information.
 
 ## Your rights and choices
 
@@ -77,17 +77,17 @@ To protect your privacy and security, we may take reasonable steps to verify you
 
 ## Children's privacy
 
-**If you are under 13 years of age, you may not use or access Limelight Creatives' services at any time or in any manner.**
+**If you are under 13 years of age, you may not use or access Lumenite Creatives' services at any time or in any manner.**
 
-Protecting the privacy of young children is especially important to us. Limelight Creatives does not knowingly collect or maintain personal information from persons under 13 years of age.
+Protecting the privacy of young children is especially important to us. Lumenite Creatives does not knowingly collect or maintain personal information from persons under 13 years of age.
 
-If Limelight Creatives learns that personal information belonging to a person under 13 has been collected through our services, we will take appropriate steps to delete that information.
+If Lumenite Creatives learns that personal information belonging to a person under 13 has been collected through our services, we will take appropriate steps to delete that information.
 
-If you are the parent or legal guardian of a child under 13 who has provided personal information through Limelight Creatives services, please contact us using our [privacy contact form](#contact) to request deletion of that information.
+If you are the parent or legal guardian of a child under 13 who has provided personal information through Lumenite Creatives services, please contact us using our [privacy contact form](#contact) to request deletion of that information.
 
 ## Retention of your information
 
-Limelight Creatives retains information about your use of our services for as long as reasonably required to fulfil the purposes described in this Privacy Policy, as required or permitted by law, or as otherwise communicated to you.
+Lumenite Creatives retains information about your use of our services for as long as reasonably required to fulfil the purposes described in this Privacy Policy, as required or permitted by law, or as otherwise communicated to you.
 
 If you ask us to close an account and delete information associated with it, we will delete information that we are not required or permitted to retain by law.
 

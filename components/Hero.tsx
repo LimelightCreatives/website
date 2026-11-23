@@ -181,7 +181,7 @@ function VideoModal({ onClose }: { onClose: () => void }) {
           <div className="aspect-video w-full">
             <iframe
               src={VIDEO_EMBED_SRC}
-              title="Limelight intro video"
+              title="Lumenite intro video"
               className="h-full w-full"
               allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
               allowFullScreen
@@ -215,25 +215,25 @@ export function Hero() {
     <section className="mt-0 relative min-h-dvh overflow-hidden">
       {/* <Polaroid
         src={PHOTO_1}
-        alt="Students filming a scene at a past Limelight event"
+        alt="Students filming a scene at a past Lumenite event"
         rotate={-8}
         className="absolute z-0 hidden top-12 -left-10 w-42 lg:block xl:w-46"
       />
       <Polaroid
         src={PHOTO_2}
-        alt="A student behind the camera at a past Limelight event"
+        alt="A student behind the camera at a past Lumenite event"
         rotate={7}
         className="absolute z-0 hidden top-[24%] -right-12 w-42 lg:block xl:w-54"
       />
       <Polaroid
         src={PHOTO_3}
-        alt="Students reviewing footage together at a past Limelight event"
+        alt="Students reviewing footage together at a past Lumenite event"
         rotate={-3}
         className="absolute z-0 hidden bottom-24 left-5 w-38 lg:block xl:w-52"
       /> */}
       <Polaroid
         src={VIDEO_THUMB}
-        alt="Watch the Limelight intro video"
+        alt="Watch the Lumenite intro video"
         caption="watch the intro"
         rotate={5}
         isVideo
@@ -291,7 +291,7 @@ export function Hero() {
         </div>
 
         <p className="mt-14 max-w-xl text-xl font-body">
-          Limelight Creatives runs free film-a-thons for high schoolers.
+          Lumenite Creatives runs free film-a-thons for high schoolers.
         </p>
 
         <div className="pointer-events-auto mt-8 flex gap-4 text-lg">
@@ -304,7 +304,7 @@ export function Hero() {
         {/* Video polaroid — mobile/tablet only, sits under the CTA buttons */}
         <Polaroid
           src={VIDEO_THUMB}
-          alt="Watch the Limelight intro video"
+          alt="Watch the Lumenite intro video"
           caption="watch the intro"
           rotate={-2}
           isVideo
