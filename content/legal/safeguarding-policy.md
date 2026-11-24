@@ -255,5 +255,5 @@ The parent's guide can be found [here](/policies/Limelight Genesis Parents Guide
 | Role | Name | Email | Phone Number |
 | --- | --- | --- | --- |
 | Safeguarding Officer | Mr Reza Hossain | rezaru2000@yahoo.com | 0401 209 543 |
-| Deputy Safeguarding Officer | Ontik Reza | ontikr@limelightcreatives.org | 0493 686 190 |
+| Deputy Safeguarding Officer | Ontik Reza | ontikr@lumenitecreatives.org | 0493 686 190 |
 | Emergency Services |-- |-- | 000 |

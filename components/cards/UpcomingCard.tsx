@@ -15,8 +15,8 @@ type Social = {
 const SOCIALS: Social[] = [
   {
     name: "Instagram",
-    handle: "@_limelightcreatives",
-    href: "https://www.instagram.com/_limelightcreatives",
+    handle: "@_lumenitecreatives",
+    href: "https://www.instagram.com/_lumenitecreatives",
     Icon: SiInstagram,
   },
   {

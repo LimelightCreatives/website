@@ -56,7 +56,7 @@ export function Footer() {
               <SiYoutube size={30} />
             </Link>
             <Link
-              href="https://www.instagram.com/_limelightcreatives"
+              href="https://www.instagram.com/_lumenitecreatives"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

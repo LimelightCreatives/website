@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 export function SponsorModal({ onClose }: { onClose: () => void }) {
-  const email = "inquiries@limelightcreatives.org";
+  const email = "inquiries@lumenitecreatives.org";
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);

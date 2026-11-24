@@ -97,7 +97,7 @@ Reports are treated confidentially and anonymously, and are shared only with tho
 | Role | Name | Email | Phone |
 | --- | --- | --- | --- |
 | Safeguarding Officer | Mr Reza Hossain | rezaru2000@yahoo.com | +61 401 209 543 |
-| Deputy Safeguarding Officer | Ontik Reza | ontikr@limelightcreatives.org | +61 493 686 190 |
+| Deputy Safeguarding Officer | Ontik Reza | ontikr@lumenitecreatives.org | +61 493 686 190 |
 | Emergency Services | — | — | 000 |
 
 ## Review and updates
