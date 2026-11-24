@@ -27,8 +27,8 @@ const SOCIALS: Social[] = [
   },
   {
     name: "YouTube",
-    handle: "@LimelightCreatives",
-    href: "https://www.youtube.com/@LimelightCreatives",
+    handle: "@LumeniteCreatives",
+    href: "https://www.youtube.com/@LumeniteCreatives",
     Icon: SiYoutube,
   },
 ];

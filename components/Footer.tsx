@@ -47,7 +47,7 @@ export function Footer() {
 
           <div className="flex items-center gap-8">
             <Link
-              href="https://www.youtube.com/@LimelightCreatives"
+              href="https://www.youtube.com/@LumeniteCreatives"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Youtube"
