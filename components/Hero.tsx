@@ -268,7 +268,7 @@ export function Hero() {
 
         <div className="relative">
           <h1 className="max-w-5xl text-[3.5rem] md:text-[clamp(3.75rem,6rem,10rem)] font-display leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
-            Your chance to step
+            Your story,
           </h1>
 
           {/* sparkles hidden on mobile */}
@@ -278,9 +278,9 @@ export function Hero() {
 
         <div className="relative">
           <h1 className="max-w-5xl text-[3.75rem] md:text-[clamp(4rem,6rem,11rem)] font-display font-bold leading-[0.8] tracking-[-0.06em] md:tracking-[-0.08em]">
-            into the{" "}
+            {" "}
             <span className="relative inline-block text-[var(--ontik-accent)]">
-              limelight.
+              illuminated.
               <LimelightSquiggle className="pointer-events-none absolute left-0 top-full mt-2 h-auto w-full" />
             </span>
           </h1>
